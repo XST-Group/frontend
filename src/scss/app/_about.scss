@@ -1,0 +1,29 @@
+@import "base";
+.about {
+  width: 80%;
+  padding: 6rem 0;
+  margin: 0 auto;
+  color: #525459;
+  text-align: center;
+  p {
+    font-weight: normal;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 6px 0;
+  }
+  button {
+    margin-top: 40px;
+    background-color: $primaryColor;
+    padding: 10px 70px;
+    border: none;
+    color: #fff;
+    font-size: 1.125rem;
+    letter-spacing: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
