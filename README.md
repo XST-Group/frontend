@@ -1,4 +1,4 @@
-# xst-frontend
+﻿# xst-frontend
 校视通工程前端部分
 
 ## 如何搭建环境
@@ -49,3 +49,6 @@ $ gulp watch
 
 然后打开chrome或者firefox，点击安装好的livereload插件（图标从空心变成实心）
 然后所有的步骤就运行完毕了，可以直接开始编码了，所有的修改不用刷新直接会出现在浏览器中了
+
+
+K0I
