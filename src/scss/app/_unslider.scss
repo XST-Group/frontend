@@ -2,8 +2,8 @@
 
 .slider {
   position: relative;
-  margin-top: -10px;
   .banner {
+    clear:both;
     overflow: hidden;
     ul li  {
       min-width: 1280px;
@@ -14,21 +14,19 @@
       }
     }
   }
-  .banner ul,
   .prev,
   .next {
     position: absolute;
     font-size: 40px;
-    padding-top: 10px;
     color: $primaryColor;
-    opacity: .8;
+    opacity: .7;
   }
   .prev {
-    top: 19rem;
+    top: 16rem;
     left: 2rem;
   }
   .next {
-    top: 19rem;
+    top: 16rem;
     right: 2rem;
   }
   .prev:hover,
