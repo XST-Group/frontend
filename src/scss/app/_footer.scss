@@ -21,7 +21,8 @@
       h3 {
         color: #36AF6D;
         opacity: .9;
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: normal;
         letter-spacing: 4px;
         margin-left: 2.4rem;
         margin-bottom: 2rem;
@@ -31,6 +32,10 @@
         margin-left: 2.4rem;
         font-size: 14px;
         letter-spacing: 1px;
+        i {
+          display: inline-block;
+          width: 24px;
+        }
       }
     }
   }
@@ -46,7 +51,7 @@
       display: inline-block;
       letter-spacing: 1px;
       margin-right: 56%;
-      font-size: .75rem;
+      font-size: .875rem;
       color: #6d747e;
       vertical-align: bottom;
     }
@@ -54,17 +59,15 @@
       display: inline-block;
       a {
         display: inline-block;
-        width: 32px;
-        height: 32px;
+        width: 34px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         border-radius: 6px;
         text-align: center;
         margin-right: 1rem;
         color: #fff;
         opacity: .7;
         background-color: #36AF6D;
-        i {
-          vertical-align: bottom;
-        }
         &:hover {
           opacity: 1;
         }

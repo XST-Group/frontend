@@ -1,22 +1,36 @@
 @import "base";
 @mixin change {
   animation: anm 0.5s ease forwards;
+  -moz-animation: anm 0.5s ease forwards;
+  -webkit-animation: anm 0.5s ease forwards;
+  -o-animation: anm 0.5s ease forwards;
 }
 @keyframes anm{
   from {background-color: $inputColor;}
   to {background-color: $primaryColor;}
 }
 
+@-moz-keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+@-webkit-keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+@-o-keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
 nav {
   background-color: $navColor;
-  height: 58px;
   .logo {
     display: inline-block;
     text-align: center;
     a{
       display: inline-block;
       padding: 0 78px;
-      margin: 10px 20px;
+      margin: 12px 20px 8px;
       color: $primaryColor;
       font-size: 24px;
       font-weight: bold;
@@ -63,23 +77,22 @@ nav {
     position:absolute;
     right: 0;
     top: 0;
-    fieldset {
-      padding: 0;
-      border: none;
-      font-size: 16px;
-      input {
-        padding-left: 1.5em;
+    border: none;
+    input {
+        -webkit-appearance: none;
         border: none;
         display: inline-block;
         width: 230px;
         font-size: 14px;
-        line-height: 57.5px;
-        vertical-align: top;
+        padding: 19px 22px;
         letter-spacing: 2px;
+        height: 58px;
         color: #fff;
         background-color: $inputColor;
         &:focus {
           @include change;
+          border: none;
+          outline:none;
         }
       }
       .btn-search {
@@ -87,12 +100,12 @@ nav {
         background-color: $navColor;
         color: #fff;
         border: none;
-        line-height: 56px;
+        padding: 19.5px 22px;
         &:hover {
           opacity: .5;
           cursor: pointer;
+          border: none;
         }
-      }
     }
   }
 }

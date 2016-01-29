@@ -4,6 +4,13 @@ $primaryColor: #36AF6D;
 $navColor: #222326;
 $inputColor: #303032;
 
+@font-face {
+  font-family: 'msyh';
+  src: url("../fonts/msyh.ttf");
+  src: url("../fonts/msyh.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 #wapper {
  margin: 0 auto;
  min-width: 1280px;
@@ -13,10 +20,17 @@ $inputColor: #303032;
   margin: 0;
   padding: 0;
 }
+*:focus {
+  outline: none;
+}
 html {
-  font-size: 100%;
+  font-size: 16px;
+    font-family: 'msyh' !important;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
 }
 body {
+  font-size: 100%;
   position: relative;
 }
 a,
