@@ -5,8 +5,7 @@ $navColor: #222326;
 $inputColor: #303032;
 @font-face {
   font-family: 'msyh';
-  src: url("../fonts/msyh.ttf");
-  src: url("../fonts/msyh.ttf") format('truetype');
+  src: url("../fonts/msyh.ttf") format('truetype'),url("../fonts/msyh.eot") format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }

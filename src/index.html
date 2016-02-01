@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>index</title>
     <link rel="stylesheet" href="css/app.min.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/html5shiv.min.js"></script>
   </head>
   <body>
     <!-- ==== START WAPPER ==== -->
@@ -42,9 +44,9 @@
 
       <!-- ==== START ABOUT ==== -->
       <div class="about">
-        <p>校视通是一家从事互联网免费教学的网络公益教育公司</p>
-        <p>秉承“开拓、创新、开拓、创新、公平、分享”的精神，致力于为教育机构及求学者打造一</p>
-        <p>站式互动在线教育品牌</p>
+        <p>&nbsp;&nbsp;&nbsp;校视通是一家从事互联网免费教学的网络公益教育公司</p>
+        <p>&nbsp;&nbsp;秉承“开拓、创新、开拓、创新、公平、分享”的精神，致力于为教育机构及求学者</p>
+        <p>打造一站式互动在线教育品牌</p>
         <button type="button" name="button">阅读更多</button>
       </div>
       <!-- ==== END ABOUT ==== -->
@@ -122,7 +124,8 @@
 
 
 
-    <script type="text/javascript" src="js/main.min.js"></script>
+    <!--<script type="text/javascript" src="js/main.min.js"></script>-->
+    <script type="text/javascript" src="js/unslider.js"></script>
     <script type="text/javascript">
     $(function() {
       $('.banner').unslider();
@@ -131,7 +134,6 @@
           var fn = this.className.split(' ')[1];
       unslider.data('unslider')[fn]();
       });
-
     });
     window.onresize = function() {
       var oImg=document.getElementsByTagName('img');
@@ -142,5 +144,6 @@
       }
     }
     </script>
+
   </body>
 </html>
