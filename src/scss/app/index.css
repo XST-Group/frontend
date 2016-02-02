@@ -413,7 +413,8 @@ li {
   position: relative;
   padding-top: 16px;
   width: 100%;
-  min-width: 1280px; }
+  min-width: 1280px;
+  clear: both; }
   .footer .f {
     margin: 0 auto;
     padding: 32px 80px 16px; }
@@ -422,8 +423,8 @@ li {
       width: 20%;
       height: 192px;
       padding-top: 16px;
-      margin-left: 8%;
-      margin-right: 4%;
+      margin-left: 6%;
+      margin-right: 6%;
       vertical-align: top;
       color: #6d747e; }
       .footer .f div h3 {
@@ -444,7 +445,7 @@ li {
           width: 24px; }
   .footer .copy {
     height: 50px;
-    padding-left: 208px;
+    padding-left: 182px;
     padding-top: 26px;
     background-color: #222326;
     text-align: left;
@@ -453,7 +454,7 @@ li {
     .footer .copy small {
       display: inline-block;
       letter-spacing: 1px;
-      margin-right: 56%;
+      margin-right: 52%;
       font-size: 14px;
       color: #6d747e;
       vertical-align: bottom; }
