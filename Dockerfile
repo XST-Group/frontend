@@ -1,4 +1,4 @@
-FROM dockerfile/nodejs
+FROM readytalk/nodejs
 
 RUN npm install -g bower gulp http-server
 
