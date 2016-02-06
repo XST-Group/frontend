@@ -7,8 +7,8 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app
 
 RUN npm install
-CMD ["ls"]
-CMD ["gulp"]
+RUN ls
+RUN gulp
 
 EXPOSE 8080
 CMD ["http-server"]
