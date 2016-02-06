@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/beike.css"/>
+
+    <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <!-- ==== START NAV ==== -->
+    <nav role="navigation">
+        <div class="logo"><a href="#">校视通</a></div>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="yunke.html">云课</a></li>
+            <li><a href="#">公社</a></li>
+            <li><a href="#">活动</a></li>
+            <li><a href="#">资讯</a></li>
+            <li class="current"><a href="#">备课</a></li>
+            <li id="last"><a href="#">校团众筹</a></li>
+        </ul>
+
+        <form class="search" action="#" method="post">
+            <fieldset>
+                <input type="search" class="text" name="name" placeholder="搜索的内容...">
+                <button class="btn-search" searchtype="submit" name="button"><i class="fa fa-search fa-lg"></i></button>
+            </fieldset>
+        </form>
+    </nav>
+    <!-- ==== END NAV ==== -->
+
+    <!--====START　SEARCH FOR THIS====-->
+    <main role="main">
+
+        <div>
+            <ul id="beike-nav">
+                <li class="now"><a href="#">全部</a></li>
+                <li><a href="#">研修</a></li>
+                <li><a href="#">才技</a></li>
+                <li><a href="#">出卷</a></li>
+                <li><a href="#">管理</a></li>
+                <li><a href="#">其他</a></li>
+            </ul>
+
+            <div id="submenu">
+                <div>
+                    <ul class="nav-main">
+                        <!--<li>首页</li>-->
+                        <li id="li-1">学段<span></span></li>
+                        <li id="li-2">学科<span></span></li>
+                        <li id="li-3">版本<span></span></li>
+                        <li id="li-4">年级<span></span></li>
+                        <li id="li-5">点击查找<span></span></li>
+                    </ul>
+
+                    <form class="search" action="#" method="post">
+                        <fieldset>
+                            <input type="search" class="text" name="name" placeholder="当前搜索...">
+                            <button class="btn-search" searchtype="submit" name="button"><i class="fa fa-search fa-lg"></i></button>
+                        </fieldset>
+                    </form>
+
+                </div>
+
+                <div id="box">
+                    <div id="box-1" class="hidden-box hidden-loc-index">
+                        <ul>
+                            <li>小学</li>
+                            <li>初中</li>
+                            <li>高中</li>
+                        </ul>
+                    </div>
+                    <div id="box-2" class="hidden-box hidden-loc-us">
+                        <ul>
+                            <li>语文</li>
+                            <li>数学</li>
+                            <li>英语</li>
+                            <li>物理</li>
+                            <li>化学</li>
+                            <li>生物</li>
+                            <li>政治</li>
+                            <li>历史</li>
+                            <li>地理</li>
+                            <li>信息技术</li>
+                        </ul>
+                    </div>
+                    <div id="box-3" class="hidden-box hidden-loc-info">
+                        <ul>
+
+                            <li>沪教版五四制度</li>
+                            <li>人教四年版</li>
+                            <li>人教版</li>
+                            <li>北师大版</li>
+                            <li>华师大版</li>
+                            <li>苏科版</li>
+                            <li>湘教版</li>
+                            <li>浙教版</li>
+                            <li>冀教版</li>
+                            <li>沪科版</li>
+
+                            <li>北师大版（2013）</li>
+                            <li>湘教版（2013）</li>
+                            <li>华师大版（2013）</li>
+                            <li>北京课改版</li>
+                            <li>人教版（2013）</li>
+                            <li>苏科版（2013）</li>
+                            <li>青岛版</li>
+                            <li>鲁教版五四制</li>
+                            <li>沪科版（2013）</li>
+                            <li>浙教版</li>
+
+                            <li>冀教版</li>
+                        </ul>
+                    </div>
+                    <div id="box-4" class="hidden-box hidden-loc-info box04">
+                        <ul>
+                            <li>六年级下</li>
+                            <li>七年级上</li>
+                            <li>七年级下</li>
+                            <li>八年级上</li>
+                            <li>八年级下</li>
+                            <li>九年级上</li>
+                            <li>九年级下</li>
+                            <li>九年级拓展</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(function(){
+                        var num;
+//                        一级标签
+                        $('.nav-main>li[id]').hover(function(){
+                            /*图标向上旋转*/
+                            $(this).children().removeClass().addClass('hover-up');
+                            /*下拉框出现*/
+                            var Obj = $(this).attr('id');
+                            num = Obj.substring(3, Obj.length);
+                            $('#box-'+num).slideDown(300);
+                        },function(){
+                            /*图标向下旋转*/
+                            $(this).children().removeClass().addClass('hover-down');
+                            /*下拉框消失*/
+                            $('#box-'+num).hide();
+                        });
+
+
+                        //    hidden-box hover e
+                        $('.hidden-box').hover(function(){      /*进来*/
+                            /*保持图标向上*/
+                            $('#li-'+num).children().removeClass().addClass('hover-up');
+                            $(this).show();                /*选择当前类显示*/
+                        },function(){            /*出去*/
+                            $(this).slideUp(200);
+                            $('#li-'+num).children().removeClass().addClass('hover-down');
+                        });
+
+                        $('.hidden-box li').click(function(){
+                            var str=$(this).text();
+                            var box_id=$(this).parent().parent().attr('id');
+                            var num_tem=box_id.charAt(box_id.length-1);
+                            $('#li-'+num_tem).text(str);
+                            //alert(num_tem);
+                        })
+
+                    });
+                </script>
+                
+            </div>
+        </div>
+
+        <div id="result">
+
+            <div id="outline">
+                <h2>章节列表</h2>
+                <div id="firstpane">
+                    <h4 class="menu_head choose_body">第五章 有理数</h4>
+                    <div class="menu_body" style="display: block">
+                        <a href="#">第1节 有理数</a>
+                        <a href="#">5.1有理数的意义</a>
+                        <a href="#">5.2数轴</a>
+                        <a href="#">5.3绝对值</a>
+                        <a href="#">第2节 有理数的运算</a>
+                        <a href="#">5.4有理数的加法</a>
+                        <a href="#">5.5有理数的减法</a>
+                        <a href="#">5.6有理数的乘法</a>
+                        <a href="#">5.7有理数的除法</a>
+                        <a href="#">5.8有理数的乘方</a>
+                        <a href="#">5.9有理数的混合运算</a>
+                        <a href="#">5.10科学计数法</a>
+                    </div>
+                    <h4 class="menu_head">第六章 一次方程组...</h4>
+                    <div class="menu_body">
+                        <a href="#">第1节 方程与方程的解</a>
+                        <a href="#">6.1列方程</a>
+                        <a href="#">6.2方程的解</a>
+                        <a href="#">第2节 一元一次方程</a>
+                        <a href="#">6.3一元一次方程及其解...</a>
+                        <a href="#">6.4一元一次方程的应用</a>
+                        <a href="#">第3节 一元一次不等式(...</a>
+                        <a href="#">6.5不等式及其性质</a>
+                        <a href="#">6.6一元一次不等式的解...</a>
+                        <a href="#">6.7一元一次不等式组</a>
+                    </div>
+                    <h4 class="menu_head">第七章 线段与角的...</h4>
+                    <div class="menu_body">
+                        <a href="#">第1节 线段的相等与和、...</a>
+                        <a href="#">7.1线段的大小的比较</a>
+                        <a href="#">7.2画线段的和、差、倍</a>
+                        <a href="#">第2节 角</a>
+                        <a href="#">7.3角的概念与表示</a>
+                        <a href="#">7.4角的大小的比较 画相...</a>
+                        <a href="#">7.5画角的和、差、倍</a>
+                        <a href="#">7.6余角、补角</a>
+                    </div>
+                    <h4 class="menu_head">第八章 长方体的再...</h4>
+                    <div class="menu_body">
+                        <a href="#">第1节 长方体的元素</a>
+                        <a href="#">第2节 长方体直观图的画...</a>
+                        <a href="#">第3节 长方体中棱位置关...</a>
+                        <a href="#">第4节 长方体中棱与平面</a>
+                        <a href="#">第5节 长方体中平面与平...</a>
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(function()
+                    {
+                        $("#firstpane .menu_head").click(function()
+                        {
+                            $(this).next("div.menu_body").slideToggle(500);
+                            if($(this).hasClass("choose_body")){
+                                $(this).removeClass("choose_body");
+                            }
+                            else{
+                                $(this).addClass("choose_body");
+                            }
+
+                        });
+                    });
+                </script>
+
+
+
+            </div>
+
+            <div id="searchresult" >
+                <div id="result-nav">
+                    <ul>
+                        <li class="now"><a>全部</a></li>
+                        <li><a>教学设计</a></li>
+                        <li><a>导学案</a></li>
+                        <li><a>课件</a></li>
+                        <li><a>素材</a></li>
+                        <li><a>作业/习题</a></li>
+                        <li><a>试卷</a></li>
+                        <li><a>微课</a></li>
+                        <li><a>其他</a></li>
+                    </ul>
+                </div>
+
+                <div id="result-sort">
+                    <span>排序</span>
+                    <a href="">发布时间<i class="fa fa-arrow-down choose_i"></i></a>
+                    <a href="">大小<i class="fa fa-arrow-down"></i></a>
+                    <a href="">评价<i class="fa fa-arrow-down"></i></a>
+                </div>
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                            <div class="flex-6">
+                                <span class="font-small">3517人已经阅读</span>
+                            </div>
+                            <div class="flex-6">
+                                <i class="fa fa-star" style="font-size: 13px"></i>
+                                <i class="fa fa-star" style="font-size: 13px"></i>
+                                <i class="fa fa-star" style="font-size: 13px"></i>
+                                <i class="fa fa-star" style="font-size: 13px"></i>
+                                <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                                <span class="font-small">751人已经评价</span>
+                            </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                        <div class="flex-6">
+                            <span class="font-small">3517人已经阅读</span>
+                        </div>
+                        <div class="flex-6">
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                            <span class="font-small">751人已经评价</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                        <div class="flex-6">
+                            <span class="font-small">3517人已经阅读</span>
+                        </div>
+                        <div class="flex-6">
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                            <span class="font-small">751人已经评价</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                        <div class="flex-6">
+                            <span class="font-small">3517人已经阅读</span>
+                        </div>
+                        <div class="flex-6">
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                            <span class="font-small">751人已经评价</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                        <div class="flex-6">
+                            <span class="font-small">3517人已经阅读</span>
+                        </div>
+                        <div class="flex-6">
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                            <span class="font-small">751人已经评价</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                        <div class="flex-6">
+                            <span class="font-small">3517人已经阅读</span>
+                        </div>
+                        <div class="flex-6">
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                            <span class="font-small">751人已经评价</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+                <div class="floor  flex-row">
+                    <div class="image-small flex-2 "><i class="fa fa-file-text fa-3x"></i></div>
+
+                    <div class="first-message flex-4 flex-col " >
+                        <div class="flex-6">
+                            <a href="">江苏省南京市江宁区某某小学...</a>
+                        </div>
+
+                        <div class="flex-6">
+                            <span class="font-small" >大小：66KB</span><span class="font-small"> 格式：doc</span>
+                        </div>
+                    </div>
+
+                    <div class="second-message flex-col flex-3 ">
+                        <div class="flex-6">
+                            <span class="font-small">3517人已经阅读</span>
+                        </div>
+                        <div class="flex-6">
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star" style="font-size: 13px"></i>
+                            <i class="fa fa-star-half-empty" style="font-size: 13px"></i>
+                            <span class="font-small">751人已经评价</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+
+
+                <div id="page">
+                    <a href="javascript:return false;" class="pre">&lt;</a>
+                    <a href="#" class="this">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#">&gt;</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer role="contentinfo" class="footer">
+        <div class="f">
+            <div class="f1">
+                <h3>统计信息</h3>
+
+                <p><span>网站总访问量</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>1365544</span></p>
+
+                <p><span>当前在线人数</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>42554</span></p>
+
+                <p><span>页面加载时间</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>0.000234</span></p>
+            </div>
+            <div class="f3">
+                <h3>联系我们</h3>
+
+                <p><span class="fa fa-map-marker"></span>&nbsp;&nbsp;&nbsp;&nbsp;江苏省南京市</p>
+
+                <p><span class="fa fa-phone"></span>&nbsp;&nbsp;&nbsp;123-456-789</p>
+
+                <p><span class="fa fa-envelope"></span>&nbsp;&nbsp;1234567@qq.com</p>
+            </div>
+            <div class="f4">
+                <h3>主办者</h3>
+
+                <p>南京市XXX教育学院</p>
+
+                <p>南京市XXX教育研究委员会</p>
+
+                <p>南京市XXX教育学会</p>
+            </div>
+
+        </div>
+        <!--<hr class="hr">-->
+        <div class="copy">
+            <small>&copy; Copyright 2016</small>
+            <p>
+                <a href="#" title="QQ"><i class="fa fa-qq"></i></a>
+                <a href="#" title="微博"><i class="fa fa-weibo"></i></a>
+                <a href="#" title="人人网"><i class="fa fa-renren"></i></a>
+                <a href="#" title="微信"><i class="fa fa-weixin"></i></a>
+            </p>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>

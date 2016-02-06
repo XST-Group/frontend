@@ -1,0 +1,58 @@
+@import "base";
+@import "main";
+@import "footer";
+
+@mixin change {
+  animation: anm 0.5s ease forwards;
+}
+@keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+
+
+$border:1px rgba(114, 114, 114, 0.75) solid;
+$a_hover:#ED6345;
+$a_active:#36AF6D;
+$a_hover_little:#34434B;
+$a_default:#27292C;
+
+@mixin font-deault {
+  font-size: 1.1rem;
+  //font-weight: bold;
+  letter-spacing: 3px;
+  padding:6px 0px;
+  color: white;
+}
+@mixin font-small{
+  font-size: 1rem;
+  //font-weight: bold;
+  letter-spacing: 3px;
+  padding:6px 0px;
+  color: white;
+}
+@mixin font-form {
+  padding-left: 1rem;
+}
+
+.font-small{
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  padding:6px 0px;
+  color: white;
+}
+
+.default-border{               /*处理最简单的边框公共块*/
+  border: $border;
+}
+
+
+main>div{
+  margin-right: 13%;
+  color: white;
+  a:hover{
+    //padding-top: 10px;
+    color: $a_hover;
+  }
+}

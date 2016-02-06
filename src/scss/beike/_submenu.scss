@@ -1,0 +1,112 @@
+@import "beike-base";
+
+#submenu{
+  height:36px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+  margin:40px auto 0 auto;
+
+  .search {
+    fieldset {
+      float: right;
+      padding: 0;
+      border: none;
+      font-size: 1rem;
+      input {
+        padding-left: 1.5em;
+        border: none;
+        display: inline-block;
+        width: 230px;
+        font-size: 14px;
+        line-height: 36px;
+        vertical-align: top;
+        letter-spacing: 2px;
+        color: #fff;
+        background-color: $inputColor;
+        &:focus {
+          @include change;
+        }
+      }
+      .btn-search {
+        margin-left: -4px;
+        width: 4rem;
+        background-color: $navColor;
+        color: #fff;
+        border: none;
+        line-height: 36px;
+        &:hover {
+          opacity: .5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .nav-main{
+    width: 100%;
+    height: 100%;
+
+    li{
+      width: 120px;
+      height: 100%;
+      display: block;
+      float: left;              /*万恶的float*/
+      background: $a_default;
+      color: #fff;
+      cursor: pointer;
+      &:hover{
+        background: $a_hover;
+      }
+      &:first-child{
+        border-top-left-radius: 6px;
+        border-bottom-left-radius:6px;
+      }
+      &:last-child{
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+    }
+  }
+
+  .hidden-box{
+    width: 118px;
+    //border: 1px solid #643519;
+    border-top: 0;
+    position: absolute;
+    display:none;
+    background:#fff;
+    top: 36px;
+    z-index: 99;
+    ul{
+      list-style-type: none;
+      color: $a_default;
+      cursor: pointer;
+      li{
+        background: $a_default;
+        color: #fff;
+        &:hover{
+          background-color: $a_hover;
+        }
+      }
+    }
+  }
+  /*隐藏盒子位置设置*/
+  .hidden-loc-index{
+    left: 0px;
+    //left: 121px;
+  }
+  .hidden-loc-us{
+    //left: 242px;
+    left: 120px;
+  }
+  .hidden-loc-info{
+    //left: 363px;
+    left: 240px;
+  }
+  .box04{
+    //left:485px;
+    left: 360px;
+  }
+}

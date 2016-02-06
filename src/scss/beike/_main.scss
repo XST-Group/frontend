@@ -1,0 +1,13 @@
+
+@import "base";
+
+$minorColor: #ED6345;
+
+main{
+  background-image: url(../images/diagmonds.png);
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+  > div {
+    margin-left: 13%;
+  }
+}
