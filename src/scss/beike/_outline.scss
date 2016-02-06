@@ -1,0 +1,45 @@
+@import "beike-base";
+
+  #outline {
+    background-color: #202023;
+    flex: 2;
+    line-height: 3rem;
+    h2 {
+      padding: 10px;
+    }
+
+    #firstpane {
+      .menu_head {
+        font-size: 1.1rem;
+        padding: 5px 1.5rem;
+        cursor: pointer;
+        position: relative;
+        margin: 1px;
+        font-weight: normal;
+
+        &:hover {
+          background-color: $a_active;
+        }
+        &:active {
+          background-color: $a_active;
+        }
+      }
+      .choose_body {
+        background-color: $a_active;
+      }
+      .menu_body {
+
+        display: none;
+        a {
+          font-size: 1rem;
+          display: block;
+          padding-left: 1.5rem;
+          text-decoration: none;
+          &:hover {
+            color: white;
+            background-color: $a_hover;
+          }
+        }
+      }
+    }
+  }
