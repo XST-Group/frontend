@@ -6,4 +6,11 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 
-CMD ["bash"]
+RUN npm install
+CMD ["gulp"]
+
+WORKDIR /usr/src/app/dist
+EXPOSE 8080
+CMD ["http-server"]
+
+
