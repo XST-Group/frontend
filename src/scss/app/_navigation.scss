@@ -1,0 +1,116 @@
+@import "base";
+@mixin change {
+  animation: anm 0.5s ease forwards;
+  -moz-animation: anm 0.5s ease forwards;
+  -webkit-animation: anm 0.5s ease forwards;
+  -o-animation: anm 0.5s ease forwards;
+}
+@keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+@-moz-keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+@-webkit-keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+@-o-keyframes anm{
+  from {background-color: $inputColor;}
+  to {background-color: $primaryColor;}
+}
+nav {
+  background-color: $navColor;
+  display: block;
+  .logo {
+    display: inline-block;
+    text-align: center;
+    a{
+      display: inline-block;
+      padding: 0 78px;
+      margin: 14px 20px 6px;
+      color: $primaryColor;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 20px;
+    }
+    &:hover {
+      border-bottom: none;
+    }
+  }
+  ul {
+    display: inline-block;
+    margin-left: 0;
+    vertical-align: top;
+    li{
+      display: inline-block;
+      text-align: center;
+      a {
+        display: inline-block;
+        padding: 21px 22px 20px;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 4px;
+      }
+      &:hover > a {
+          background-color: $inputColor;
+      }
+    }
+    li.current {
+      display: inline-block;
+      border-bottom: none;
+      a {
+        background-color: $primaryColor;
+      }
+      &:hover a{
+        background-color: $primaryColor;
+      }
+    }
+    li#last {
+      margin-right: 34px;
+      border-right: none;
+    }
+  }
+  .search {
+    display: inline-block;
+    position:absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    input {
+      position:absolute;
+      right: 64px;
+      top: 0;
+      font-family: 'msyh';
+        -webkit-appearance: none;
+        border: none;
+        display: inline-block;
+        width: 230px;
+        font-size: 14px;
+        padding: 21px 22px 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        background-color: $inputColor;
+        &:focus {
+          @include change;
+          border: none;
+          outline:none;
+        }
+      }
+      .btn-search {
+        width: 64px;
+        background-color: $navColor;
+        color: #fff;
+        border: none;
+        padding: 20px 22px 21px;
+        &:hover {
+          opacity: .5;
+          filter: alpha(opacity=50);
+          cursor: pointer;
+          border: none;
+        }
+    }
+  }
+}

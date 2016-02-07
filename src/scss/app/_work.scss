@@ -1,0 +1,22 @@
+@import "base";
+.work {
+  background-color: $primaryColor;
+  color: #fff;
+  padding: 128px 0;
+  text-align: center;
+  div {
+    display: inline-block;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      font-size: 22px;
+      letter-spacing: 6px;
+    }
+    p {
+      margin-top: 8px;
+      letter-spacing: 1px;
+    }
+  }
+}
