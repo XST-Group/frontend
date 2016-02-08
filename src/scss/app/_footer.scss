@@ -3,19 +3,20 @@
 .footer {
   background-color: #27292C;
   position: relative;
-  padding-top: 1rem;
+  padding-top: 16px;
   width: 100%;
   min-width: 1280px;
+  clear: both;
   .f {
     margin: 0 auto;
-    padding: 2rem 5rem 1rem;
+    padding: 32px 80px 16px;
     div {
       display: inline-block;
       width: 20%;
-      height: 12rem;
-      padding-top: 1rem;
-      margin-left: 8%;
-      margin-right: 4%;
+      height: 192px;
+      padding-top: 16px;
+      margin-left: 6%;
+      margin-right: 6%;
       vertical-align: top;
       color: #6d747e;
       h3 {
@@ -24,12 +25,12 @@
         font-size: 18px;
         font-weight: normal;
         letter-spacing: 4px;
-        margin-left: 2.4rem;
-        margin-bottom: 2rem;
+        margin-left: 38px;
+        margin-bottom: 32px;
       }
       p{
-        margin-top: .75rem;
-        margin-left: 2.4rem;
+        margin-top: 12px;
+        margin-left: 38px;
         font-size: 14px;
         letter-spacing: 1px;
         i {
@@ -41,17 +42,17 @@
   }
   .copy {
     height: 50px;
-    padding-left: 13rem;
+    padding-left: 182px;
     padding-top: 26px;
     background-color: #222326;
     text-align: left;
-    font-size: 1.125rem;
+    font-size: 18px;
     color: #fff;
     small {
       display: inline-block;
       letter-spacing: 1px;
-      margin-right: 56%;
-      font-size: .875rem;
+      margin-right: 54%;
+      font-size: 14px;
       color: #6d747e;
       vertical-align: bottom;
     }
@@ -64,12 +65,14 @@
         padding-bottom: 8px;
         border-radius: 6px;
         text-align: center;
-        margin-right: 1rem;
+        margin-right: 16px;
         color: #fff;
         opacity: .7;
+        filter:alpha(opacity=70);
         background-color: #36AF6D;
         &:hover {
           opacity: 1;
+          filter:alpha(opacity=100);
         }
       }
     }

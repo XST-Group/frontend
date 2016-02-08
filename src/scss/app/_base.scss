@@ -3,11 +3,9 @@
 $primaryColor: #36AF6D;
 $navColor: #222326;
 $inputColor: #303032;
-
 @font-face {
   font-family: 'msyh';
-  src: url("../fonts/msyh.ttf");
-  src: url("../fonts/msyh.ttf") format('truetype');
+  src: url("../fonts/msyh.ttf") format('truetype'),url("../fonts/msyh.eot") format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +13,6 @@ $inputColor: #303032;
  margin: 0 auto;
  min-width: 1280px;
 }
-
 * {
   margin: 0;
   padding: 0;

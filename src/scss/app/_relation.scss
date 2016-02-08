@@ -1,0 +1,35 @@
+#relation {
+  width: 260px;
+  display: inline-block;
+  margin-left: 100px;
+  margin-bottom: 80px;
+  h2 {
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 8px;
+    margin-bottom: 18px;
+    margin-left: 10px;
+    display: inline-block;
+    padding-bottom: 4px;
+    color: $inputColor;
+  }
+  div {
+    background-color: #F2F2F2;
+    padding: 10px;
+    margin-bottom: 14px;
+    a {
+      img {
+        width: 240px;
+        height: 120px;
+      }
+      p {
+        color: $inputColor;
+        font-size: 14px;
+      }
+      &:hover img {
+        opacity: .8;
+        filter:alpha(opacity=80);
+      }
+    }
+  }
+}

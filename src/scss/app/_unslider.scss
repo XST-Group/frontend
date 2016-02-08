@@ -20,14 +20,15 @@
     font-size: 40px;
     color: $primaryColor;
     opacity: .7;
+    filter: alpha(opacity=70);
   }
   .prev {
-    top: 16rem;
-    left: 2rem;
+    top: 256px;
+    left: 32px;
   }
   .next {
-    top: 16rem;
-    right: 2rem;
+    top: 256px;
+    right: 32px;
   }
   .prev:hover,
   .next:hover {
