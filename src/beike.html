@@ -125,46 +125,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <script>
-                    $(document).ready(function(){
-                        var num;
-//                        一级标签
-                        $('.nav-main>li[id]').hover(function(){
-                            /*图标向上旋转*/
-                            $(this).children().removeClass().addClass('hover-up');
-                            /*下拉框出现*/
-                            var Obj = $(this).attr('id');
-                            num = Obj.substring(3, Obj.length);
-                            $('#box-'+num).slideDown(300);
-                        },function(){
-                            /*图标向下旋转*/
-                            $(this).children().removeClass().addClass('hover-down');
-                            /*下拉框消失*/
-                            $('#box-'+num).hide();
-                        });
-
-
-                        //    hidden-box hover e
-                        $('.hidden-box').hover(function(){      /*进来*/
-                            /*保持图标向上*/
-                            $('#li-'+num).children().removeClass().addClass('hover-up');
-                            $(this).show();                /*选择当前类显示*/
-                        },function(){            /*出去*/
-                            $(this).slideUp(200);
-                            $('#li-'+num).children().removeClass().addClass('hover-down');
-                        });
-
-                        $('.hidden-box li').click(function(){
-                            var str=$(this).text();
-                            var box_id=$(this).parent().parent().attr('id');
-                            var num_tem=box_id.charAt(box_id.length-1);
-                            $('#li-'+num_tem).text(str);
-                            //alert(num_tem);
-                        })
-
-                    });
-                </script>
                 
             </div>
         </div>
@@ -223,22 +183,6 @@
                     </div>
                 </div>
 
-                <script>
-                    $(document).ready(function()
-                    {
-                        $("#firstpane .menu_head").click(function()
-                        {
-                            $(this).next("div.menu_body").slideToggle(500);
-                            if($(this).hasClass("choose_body")){
-                                $(this).removeClass("choose_body");
-                            }
-                            else{
-                                $(this).addClass("choose_body");
-                            }
-
-                        });
-                    });
-                </script>
 
 
 
@@ -534,5 +478,56 @@
     </footer>
 </div>
 <script type="text/javascript" src="js/main.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var num;
+//                        一级标签
+        $('.nav-main>li[id]').hover(function(){
+            /*图标向上旋转*/
+            $(this).children().removeClass().addClass('hover-up');
+            /*下拉框出现*/
+            var Obj = $(this).attr('id');
+            num = Obj.substring(3, Obj.length);
+            $('#box-'+num).slideDown(300);
+        },function(){
+            /*图标向下旋转*/
+            $(this).children().removeClass().addClass('hover-down');
+            /*下拉框消失*/
+            $('#box-'+num).hide();
+        });
+
+
+        //    hidden-box hover e
+        $('.hidden-box').hover(function(){      /*进来*/
+            /*保持图标向上*/
+            $('#li-'+num).children().removeClass().addClass('hover-up');
+            $(this).show();                /*选择当前类显示*/
+        },function(){            /*出去*/
+            $(this).slideUp(200);
+            $('#li-'+num).children().removeClass().addClass('hover-down');
+        });
+
+        $('.hidden-box li').click(function(){
+            var str=$(this).text();
+            var box_id=$(this).parent().parent().attr('id');
+            var num_tem=box_id.charAt(box_id.length-1);
+            $('#li-'+num_tem).text(str);
+            //alert(num_tem);
+        })
+
+        $("#firstpane .menu_head").click(function()
+        {
+            $(this).next("div.menu_body").slideToggle(500);
+            if($(this).hasClass("choose_body")){
+                $(this).removeClass("choose_body");
+            }
+            else{
+                $(this).addClass("choose_body");
+            }
+
+        });
+
+    });
+</script>
 </body>
 </html>
