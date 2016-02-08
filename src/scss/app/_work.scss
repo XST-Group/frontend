@@ -2,20 +2,20 @@
 .work {
   background-color: $primaryColor;
   color: #fff;
-  padding: 8rem 0;
+  padding: 128px 0;
   text-align: center;
   div {
     display: inline-block;
     margin-left: 3.5%;
     margin-right: 3.5%;
     h2 {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      font-size: 1.25rem;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      font-size: 22px;
       letter-spacing: 6px;
     }
     p {
-      margin-top: .5rem;
+      margin-top: 8px;
       letter-spacing: 1px;
     }
   }
