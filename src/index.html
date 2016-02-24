@@ -1,143 +1,267 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
     <meta charset="utf-8">
     <title>index</title>
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body>
-    <!-- ==== START WAPPER ==== -->
-    <div id="wapper">
+    <header>
+      <div class="container">
+        <div class="navbar-header pull-left"><a href="/" class="navbar-brand">
+          <img src="images/logo.png" alt="Logo" class="img-responsive" width="90"></a>
+        </div>
+        <nav class="collapse navbar-collapse pull-left">
+          <ul class="navbar-nav nav topmenu">
+            <li><a href="">课程</a></li>
+            <li><a href="">小组</a></li>
+            <li><a href="">活动</a></li>
+            <li><a href="">资讯</a></li>
+            <li><a href="">文库</a></li>
+          </ul>
+        </nav>
+        <div class="pull-right user-nav clearfix">
+          <ul class="nav nav-login">
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- end of header -->
 
-
-      <!-- ==== START NAV ==== -->
-      <nav role="navigation">
-            <div class="logo"><a href="#">校视通</a></div>
-            <ul>
-                <li class="current"><a href="index.html">首页</a></li><li><a href="yunke.html">云课</a></li><li><a href="#">公社</a></li><li><a href="#">活动</a></li><li><a href="#">资讯</a></li><li><a href="beike.html">备课</a></li><li id="last"><a href="#">校团众筹</a></li>
-            </ul>
-
-            <form class="search" action="#" method="post">
-                <input type="search" class="text" name="name" placeholder="搜索的内容..."><button class="btn-search" searchtype="submit" name="button"><i class="fa fa-search fa-lg"></i></button>
-            </form>
-      </nav>
-      <!-- ==== END NAV ==== -->
-
-
-      <!-- ==== START SLIDER ==== -->
+    <section class="poster">
       <div class="slider">
         <div class="banner">
           <ul>
-              <li><img src="images/03.jpg" alt="" width="100%" height="100%"/></li>
-              <li><img src="images/02.jpg" alt="" width="100%" height="100%"/></li>
-              <li><img src="images/03.jpg" alt="" width="100%" height="100%"/></li>
-              <li><img src="images/02.jpg" alt="" width="100%" height="100%"/></li>
+            <li style="background-image: url('images/03.jpg');"></li>
+            <li style="background-image: url('images/02.jpg');"></li>
           </ul>
         </div>
-        <a href="#" class="unslider-arrow prev"><span class="fa fa-chevron-left"></span></a>
-        <a href="#" class="unslider-arrow next"><span class="fa fa-chevron-right"></span></a>
+        <a href="#" class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>
+        <a href="#" class="unslider-arrow next"><i class="fa fa-angle-right"></i></a>
       </div>
-      <!-- ==== END SLIDER ==== -->
+    </section>
+    <!-- end of poster -->
 
+    <section class="index-course index-section">
+      <div class="container">
+        <h2><span>推荐课程</span></h2>
+        <div class="index-course-list course">
+          <div class="row clearfix">
+            <div class="col-sm-3 col-xs-6">
+              <div class="course-item">
+                <div class="course-thumb">
+                  <a href=""><img src="images/course.jpg" alt=""></a>
+                </div>
+                <div class="course-info">
+                  <div class="title"><a href="">课程课程课程</a></div>
+                  <div class="desc"><p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述</p></div>
+                  <div class="addon">
+                    <span class="author">作者</span>
+                    <span class="pull-right free">免费</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="course-item">
+                <div class="course-thumb">
+                  <a href=""><img src="images/course.jpg" alt=""></a>
+                </div>
+                <div class="course-info">
+                  <div class="title"><a href="">课程课程课程</a></div>
+                  <div class="desc"><p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述</p></div>
+                  <div class="addon">
+                    <span class="author">作者</span>
+                    <span class="pull-right free">免费</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="course-item">
+                <div class="course-thumb">
+                  <a href=""><img src="images/course.jpg" alt=""></a>
+                </div>
+                <div class="course-info">
+                  <div class="title"><a href="">课程课程课程</a></div>
+                  <div class="desc"><p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述</p></div>
+                  <div class="addon">
+                    <span class="author">作者</span>
+                    <span class="pull-right free">免费</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <div class="course-item">
+                <div class="course-thumb">
+                  <a href=""><img src="images/course.jpg" alt=""></a>
+                </div>
+                <div class="course-info">
+                  <div class="title"><a href="">课程课程课程</a></div>
+                  <div class="desc"><p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述</p></div>
+                  <div class="addon">
+                    <span class="author">作者</span>
+                    <span class="pull-right free">免费</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of index course -->
 
-      <!-- ==== START ABOUT ==== -->
-      <div class="about">
+    <section class="index-group index-section">
+      <div class="container">
+        <h2><span>热门小组</span></h2>
+        <div class="index-group-list group">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3">
+              <div class="group-item">
+                <div class="group-thumb">
+                  <a href=""><img src="images/group.jpg" alt=""></a>
+                </div>
+                <div class="group-info">
+                  <div class="title">小组名称</div>
+                  <div class="desc">小组描述小组描述小组描述小组描述小组描述小组描述小组描述小组描述</div>
+                  <a href="#" class="btn btn-primary">立即加入</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <div class="group-item">
+                <div class="group-thumb">
+                  <a href=""><img src="images/group.jpg" alt=""></a>
+                </div>
+                <div class="group-info">
+                  <div class="title">小组名称</div>
+                  <div class="desc">小组描述小组描述小组描述小组描述小组描述小组描述小组描述小组描述</div>
+                  <a href="#" class="btn btn-primary">立即加入</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <div class="group-item">
+                <div class="group-thumb">
+                  <a href=""><img src="images/group.jpg" alt=""></a>
+                </div>
+                <div class="group-info">
+                  <div class="title">小组名称</div>
+                  <div class="desc">小组描述小组描述小组描述小组描述小组描述小组描述小组描述小组描述</div>
+                  <a href="#" class="btn btn-primary">立即加入</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+              <div class="group-item">
+                <div class="group-thumb">
+                  <a href=""><img src="images/group.jpg" alt=""></a>
+                </div>
+                <div class="group-info">
+                  <div class="title">小组名称</div>
+                  <div class="desc">小组描述小组描述小组描述小组描述小组描述小组描述小组描述小组描述</div>
+                  <a href="#" class="btn btn-primary">立即加入</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of index group -->
+
+    <section class="index-about index-section">
+      <div class="container">
+        <h2><span>关于校视通</span></h2>
         <p>&nbsp;&nbsp;&nbsp;校视通是一家从事互联网免费教学的网络公益教育公司</p>
         <p>&nbsp;&nbsp;秉承“开拓、创新、开拓、创新、公平、分享”的精神，致力于为教育机构及求学者</p>
         <p>打造一站式互动在线教育品牌</p>
-        <button type="button" name="button">阅读更多</button>
       </div>
-      <!-- ==== END ABOUT ==== -->
+    </section>
+    <!-- end of index about -->
 
-
-      <!-- ==== START WORK ==== -->
-      <div class="work">
-        <div class="">
-          <i class="fa fa-graduation-cap fa-5x"></i>
-          <h2>免费学习</h2>
-          <p>校视通是一家从事互联网免费</p>
-          <p>教学的网络公益教育公司</p>
-          <p>秉承“开拓、创新、公平、分享”的精神</p>
-          <p>致力于为教育机构及求学者</p>
-          <p>打造在线教育品牌</p>
+    <section class="index-ad index-section">
+      <div class="row">
+        <div class="col-md-4 icon-1">
+          <i class="fa fa-graduation-cap"></i>
+          <h3>免费学习</h3>
+          <p>校视通是一家从事互联网免费教学的网络公益教育公司秉承“开拓、创新、公平、分享”的精神致力于为教育机构及求学者打造教育品牌</p>
         </div>
-        <div class="">
-          <i class="fa fa-heart fa-5x"></i>
-          <h2>公益活动</h2>
-          <p>校视通是一家从事互联网免费</p>
-          <p>教学的网络公益教育公司</p>
-          <p>秉承“开拓、创新、公平、分享”的精神</p>
-          <p>致力于为教育机构及求学者</p>
-          <p>打造教育品牌</p>
+        <div class="col-md-4 icon-2">
+          <i class="fa fa-heart"></i>
+          <h3>公益活动</h3>
+          <p>校视通是一家从事互联网免费教学的网络公益教育公司秉承“开拓、创新、公平、分享”的精神致力于为教育机构及求学者打造教育品牌</p>
         </div>
-        <div class="">
-          <i class="fa fa-rocket fa-5x"></i>
-          <h2>学习计划</h2>
-          <p>校视通是一家从事互联网免费</p>
-          <p>教学的网络公益教育公司</p>
-          <p>秉承“开拓、创新、公平、分享”的精神</p>
-          <p>致力于为教育机构及求学者</p>
-          <p>打造品牌</p>
+        <div class="col-md-4 icon-3">
+          <i class="fa fa-rocket"></i>
+          <h3>学习计划</h3>
+          <p>校视通是一家从事互联网免费教学的网络公益教育公司秉承“开拓、创新、公平、分享”的精神致力于为教育机构及求学者打造教育品牌</p>
         </div>
       </div>
-      <!-- ==== END WORK ==== -->
+      <div class="index-ad-button"><a href="" class="btn btn-default">立即开始学习</a></div>
+    </section>
+    <!-- end of index ad -->
 
-
-      <!-- ==== START FOOTER ==== -->
-      <footer role="contentinfo" class="footer">
-      <div class="f">
-          <div class="f1">
-            <h3>统计信息</h3>
-            <p><span>网站总访问量 : </span><span>1365544</span></p>
-            <p><span>当前在线人数 : </span><span>42554</span></p>
-            <p><span>页面加载时间 : </span><span>0.000234</span></p>
+    <footer>
+      <div class="container site-info">
+        <div class="row">
+          <div class="col-xs-2"><a href="/"><img src="images/logo.png" alt="" width="120"></a></div>
+          <div class="col-xs-6">
+            <div class="row">
+              <div class="col-xs-6">
+                <h3>统计信息</h3>
+                <p>网站总访问量 : 1365544</p>
+                <p>当前在线人数 : 42554</p>
+                <p>页面加载时间 : 0.000234</p>
+              </div>
+              <div class="col-xs-6">
+                <h3>主办单位</h3>
+                <p>南京市XXX教育学院</p>
+                <p>南京市XXX教育研究委员会</p>
+                <p>南京市XXX教育学会</p>
+              </div>
+            </div>
           </div>
-          <div class="f3">
-            <h3>联系我们</h3>
-            <p><i class="fa fa-map-marker"></i>江苏省南京市</p>
-            <p><i class="fa fa-phone"></i>123-456-789</p>
-            <p><i class="fa fa-envelope"></i>1234567@qq.com</p>
-          </div>
-          <div class="f4">
-            <h3>主办者</h3>
-            <p>南京市XXX教育学院</p>
-            <p>南京市XXX教育研究委员会</p>
-            <p>南京市XXX教育学会</p>
+          <div class="col-xs-4 contacts">
+            <span>关注我们:</span>
+            <a href=""><i class="contact-icon fa fa-weibo"></i></a>
+            <a href=""><i class="contact-icon fa fa-weixin"></i></a>
+            <a href=""><i class="contact-icon fa fa-qq"></i></a>
+            <a href=""><i class="contact-icon fa fa-renren"></i></a>
+            <div class="contact-detail">
+              <p><i class="fa fa-map-marker"></i>江苏省南京市</p>
+              <p><i class="fa fa-phone"></i>123-456-789</p>
+              <p><i class="fa fa-envelope"></i>1234567@qq.com</p>
+            </div>
           </div>
         </div>
-        <div class="copy">
-          <small>&copy; Copyright 2016</small>
-          <p>
-            <a href="#" class="fa fa-qq" title="QQ"></a>
-            <a href="#" class="fa fa-weibo" title="微博"></a>
-            <a href="#" class="fa fa-renren" title="人人网"></a>
-            <a href="#" class="fa fa-weixin" title="微信"></a>
-          </p>
-        </div>
-      </footer>
-      <!-- ==== END FOOTER ==== -->
+      </div>
+      <div class="copyright">
+        <p>江苏省南京市 123-456-789 1234567@qq.com</p>
+        <p>备案号 © Copyright 2016</p>
+      </div>
+    </footer>
+    <!-- end of footer -->
 
-
-    <!-- ==== END WAPPER ==== -->
-    <script type="text/javascript" src="js/main.min.js"></script>
-    <script type="text/javascript">
-    $(function() {
-      $('.banner').unslider();
-      var unslider = $('.banner').unslider();
-      $('.unslider-arrow').click(function() {
+    <script type="text/javascript"src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript"src="js/main.min.js"></script>
+    <script>
+      $(function() {
+        var unslider = $('.banner').unslider({
+          fluid: true,
+          dots: true
+        });
+        $('.unslider-arrow').click(function() {
           var fn = this.className.split(' ')[1];
-      unslider.data('unslider')[fn]();
-      });
-    });
-    window.onresize = function() {
-      var oImg=document.getElementsByTagName('img');
-      var ss=document.body.clientWidth;
-      ss = (ss>1280) ? ss : 1280;
-      for( i=0;i<4;i++ ) {
-        oImg[i].style.width=ss+"px";
-      }
-    }
-    </script>
 
+          //  Either do unslider.data('unslider').next() or .prev() depending on the className
+          unslider.data('unslider')[fn]();
+        });
+      });
+    </script>
   </body>
 </html>
