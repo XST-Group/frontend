@@ -10,7 +10,7 @@ RUN npm install
 RUN ls
 RUN gulp
 
-EXPOSE 8080
-CMD ["http-server"]
+EXPOSE 8000
+CMD ["http-server","-p","8000"]
 
 
