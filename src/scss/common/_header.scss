@@ -1,0 +1,49 @@
+
+header {
+	background-color: $topmenu-background-color;
+	box-shadow: 1.5px 2.6px 9px 0 rgba(0,0,0,0.05);
+	position: relative;
+
+	.navbar-brand {
+		height: $topmenu-height;
+		padding: ($topmenu-height - $topmenu-brand-height) 10px;
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+}
+
+.topmenu {
+	&.navbar-nav {
+		li {
+			a {
+				padding: 25px 20px;
+				font-size: $topmenu-fontsize;
+				&:hover{
+					background-color: #fff;
+				}
+			}
+
+		}
+	}
+}
+.user-nav {
+	.nav {
+		li {
+			height: $topmenu-height;
+			line-height: $topmenu-height;
+			float: left;
+			vertical-align: middle;
+			a {
+				padding: 0 10px;
+				font-size: $topmenu-fontsize;
+				color: $link-hover-color;
+				&:hover{
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+
