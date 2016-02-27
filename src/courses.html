@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-xs-3">
                 <div class="aside">
-
+                    <div id="treeview"></div>
                 </div>
             </div>
             <div class="col-xs-9">
@@ -52,7 +52,7 @@
                         <div class="col-md-4">
                             <div class="course-item">
                                 <div class="course-thumb">
-                                    <a href=""><img src="images/course.jpg" alt=""></a>
+                                    <a href="course.html"><img src="images/course.jpg" alt=""></a>
                                 </div>
                                 <div class="course-info">
                                     <div class="title"><a href="">课程课程课程</a></div>
@@ -142,6 +142,20 @@
                     </div>
                 </div>
                 <!-- end of course-list -->
+
+                <nav>
+                  <ul class="pagination">
+                    <li><a href="#">上一页</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                      <a href="#">下一页</a>
+                    </li>
+                  </ul>
+                </nav>
             </div>
         </div>
     </div>
@@ -188,6 +202,56 @@
 </footer>
 <!-- end of footer -->
 
+<script type="text/javascript"src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript"src="js/main.min.js"></script>
+<script>
+var tree = [
+  {
+    text: "Parent 1",
+    selectable: false,
+    nodes: [
+      {
+        text: "Child 1",
+        selectable: false,
+        nodes: [
+          {
+            text: "Grandchild 1",
+            selectable: false,
+          },
+          {
+            text: "Grandchild 2",
+            selectable: false,
+          }
+        ]
+      },
+      {
+        text: "Child 2",
+        selectable: false,
+      }
+    ]
+  },
+  {
+    selectable: false,
+    text: "Parent 2"
+  },
+  {
+    selectable: false,
+    text: "Parent 3"
+  },
+  {
+    selectable: false,
+    text: "Parent 4"
+  },
+  {
+    selectable: false,
+    text: "Parent 5"
+  }
+];                  
 
+    console.log(tree); 
+    var $tree = $('#treeview').treeview({
+        data: tree,
+    });
+</script>
 </body>
 </html>

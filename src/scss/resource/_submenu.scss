@@ -1,15 +1,26 @@
-#submenu{
+.resource-menu {
+  margin: 0 20px;
+}
+.submenu{
   border-bottom: 1px solid lighten($font-color,40%);
   ul{
     margin: 0px;
     display: block;
     border: 1px solid lighten($font-color,40%);
     border-bottom: none;
-    padding: 0.5rem;
+    padding: 10px 15px;
     font-size: 13px;
     li{
       display: inline;
-      margin: 1rem;
+      margin: 10px;
+      &.active {
+        a {
+          color: $link-hover-color;
+        }
+      }
+      a {
+        line-height: 20px;
+      }
     }
   }
 }

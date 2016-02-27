@@ -1,0 +1,19 @@
+.aside {
+	ul {
+		border: 1px solid #ddd;
+		border-top: 2px solid #15c288;
+	}
+	li {
+		border-radius: 0;
+		border: none;
+		padding: 10px 15px;
+		font-size: 13px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 0;
+		cursor: pointer;
+		&:hover {
+			color: $link-hover-color;
+			background-color: #fff !important;
+		}
+	}	
+}

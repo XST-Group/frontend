@@ -40,6 +40,11 @@ gulp.task('fonts', function () {
 		.pipe(gulp.dest('./dist/fonts'))
 });
 
+gulp.task('player', function () {
+    gulp.src('./src/player/*')
+        .pipe(gulp.dest('./dist/player'))
+});
+
 gulp.task('js', function () {
     gulp.src('./src/js/*.js')
         .pipe(concat('main.js'))
@@ -57,7 +62,6 @@ gulp.task('serve', function() {
             baseDir: "./"
         }
     });
-
     gulp.watch('./src/*.html',['html']);
     gulp.watch('./src/scss/*/*.scss',['css']);
     gulp.watch('./src/images/**/*',['images']);
@@ -71,10 +75,8 @@ gulp.task('clean', function() {
 });
 
 gulp.task('default', ['clean'], function(){
-    gulp.start('html','css','images','js', 'fonts');
+    gulp.start('html','css','images','js', 'fonts', 'player');
 });
-
-
 
 gulp.task('watch',function(){
 	livereload.listen()
