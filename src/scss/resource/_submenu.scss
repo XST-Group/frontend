@@ -1,0 +1,15 @@
+#submenu{
+  border-bottom: 1px solid lighten($font-color,40%);
+  ul{
+    margin: 0px;
+    display: block;
+    border: 1px solid lighten($font-color,40%);
+    border-bottom: none;
+    padding: 0.5rem;
+    font-size: 13px;
+    li{
+      display: inline;
+      margin: 1rem;
+    }
+  }
+}

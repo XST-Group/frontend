@@ -1,0 +1,143 @@
+#result {
+  margin-top: 20px;
+  display: flex;
+  i {
+    color: white;
+  }
+
+  #searchresult {
+    flex: 8;
+    #result-nav {
+      ul{
+        font-size: 18px;
+        background-color:lighten($font-color,50%) ;
+        border-left: 2px solid #eeeeee;
+        .all{
+          background-color: white;
+        }
+        .navmenu{
+          &:hover{
+            box-shadow: 4px 4px 10px #888888;
+            ul{
+              box-shadow: 4px 4px 15px 1px#888888;
+            }
+          }
+        }
+
+        li{
+          border-left: none;
+          width: 160px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          float: left;
+          position: relative;
+          cursor: pointer;
+          i{
+            color: black;
+          }
+
+          ul{
+            width: 160px;
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            display: none;
+            li{
+              float: none;
+            }
+          }
+        }
+      }
+
+    }
+    .floor {
+      height: 160px;
+      .img {
+        i{
+          position: relative;
+          top: 30%;
+          left: 30%;
+          color: $link-color;
+        }
+      }
+
+      .detail{
+        .detail1{
+          color: darken($font-color,20%);
+          padding: 10px;
+          font-size: 23px;
+          vertical-align: middle;
+        }
+        .detail2{
+          padding: 0 10px 10px 10px;
+          font-size: 15px;
+          overflow: hidden;
+          a{
+            color: $link-hover-color;
+          }
+        }
+        .detail3{
+          font-size: 12px;
+          .icon{
+            i{
+              color:$link-color ;
+              padding: 10px;
+            }
+          }
+          .format{
+            padding: 0 10px 10px 10px;
+          }
+        }
+
+
+      }
+
+      .index-ad-button{
+        position: relative;
+        top: 40%;
+        text-align: center;
+        a{
+          color: white;
+          background-color: $link-hover-color;
+          //padding-left: rem;
+
+          i{
+            color: white;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+    .line{
+      border-bottom: 3px dashed lighten($font-color,40%);
+      width: 93%;
+      margin: auto;
+    }
+    #page {
+      float: right;
+      ul{
+        margin-top: 15px;
+        li{
+          border: 1px solid lighten($font-color,40%);
+          display: inline;
+          padding: 5px 15px;
+          cursor: pointer;
+          &:hover{
+            background-color:$link-hover-color;
+            a{
+              color: white;
+            }
+          }
+
+        }
+        .now{
+          background-color: $link-hover-color;
+          a{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
