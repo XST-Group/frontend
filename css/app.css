@@ -7924,6 +7924,17 @@ ul {
     background-color: #13ab78;
     border: 1px solid #13ab78; }
 
+.main {
+  padding: 10px 0; }
+
+.breadcrumb {
+  background-color: #fff; }
+  .breadcrumb li a {
+    color: #bbb;
+    font-size: 13px; }
+    .breadcrumb li a:hover {
+      color: #15c288; }
+
 header {
   background-color: #fff;
   box-shadow: 1.5px 2.6px 9px 0 rgba(0, 0, 0, 0.05);
@@ -8161,7 +8172,8 @@ footer {
 
 .course .course-item {
   position: relative;
-  border: 1px solid #ddd; }
+  border: 1px solid #ddd;
+  margin-bottom: 15px; }
   .course .course-item .course-thumb {
     position: relative;
     overflow: hidden; }

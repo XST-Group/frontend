@@ -27,3 +27,20 @@ ul {
     border: 1px solid darken($button-primary-bg, 5%);
   }
 }
+
+.main {
+  padding: 10px 0;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  li {
+    a {
+      color: #bbb;
+      font-size: 13px;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
