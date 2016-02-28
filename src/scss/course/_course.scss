@@ -18,6 +18,10 @@
         color: #444;
         margin-bottom: 5px;
         font-weight: bold;
+        height: 40px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        overflow: hidden;
       }
       .desc {
         font-size: 12px;

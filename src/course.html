@@ -46,7 +46,7 @@
     <div class="video-wrapper">
         <div class="container">
             <div class="video">
-                <img src="http://basic.demo.nagasoft.cn:81/assets/images/bof.jpg" id="replaceImg" />
+                <img src="http://basic.demo.nagasoft.cn:81/assets/images/bof.jpg" id="replaceImg" data-url=""vjms://demo.nagasoft.cn:8500:3501/vod/cid=1&hash=75210313a9ce33d96fbc28922ae42ba4&mime=flv&bitrate=1075000&size=142609430&time=1061|高中物理必修一1-超清flv.flv&usep2p=1""/>
             </div>
             <div class="list">
                 <div class="tabs">
@@ -125,11 +125,10 @@
 <script type="text/javascript">
 $(function(){
     var replaceImg = $("#replaceImg");
-    var vid = 111;
-    var vbid = 231;
-    var adparamsId = '0';
-    url = "vjms://demo.nagasoft.cn:8500:3501/vod/cid=1&hash=75210313a9ce33d96fbc28922ae42ba4&mime=flv&bitrate=1075000&size=142609430&time=1061|高中物理必修一1-超清flv.flv&usep2p=1"
-    playVideo(vid);
+    var url = "vjms://demo.nagasoft.cn:8500:3501/vod/cid=1&hash=75210313a9ce33d96fbc28922ae42ba4&mime=flv&bitrate=1075000&size=142609430&time=1061|高中物理必修一1-超清flv.flv&usep2p=1"
+//    url = replaceImg.attr("data-url");
+    console.log(url);
+    getFlashHtml(url,replaceImg);
 });
 </script>
 </body>

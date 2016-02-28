@@ -7916,6 +7916,9 @@ a {
 ul {
   padding: 0; }
 
+li {
+  list-style: none; }
+
 .btn-primary {
   color: #fff !important;
   background: #15c288;
@@ -8225,7 +8228,11 @@ footer {
       font-size: 14px;
       color: #444;
       margin-bottom: 5px;
-      font-weight: bold; }
+      font-weight: bold;
+      height: 40px;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      overflow: hidden; }
     .course .course-item .course-info .desc {
       font-size: 12px;
       height: 34px;

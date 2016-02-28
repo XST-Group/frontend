@@ -32,6 +32,7 @@
 		injectStyle: true,
 
 		levels: 2,
+		categoryUrl: undefined,
 
 		expandIcon: 'fa fa-plus',
 		collapseIcon: 'fa fa-minus',
@@ -142,7 +143,10 @@
 
 			// Search methods
 			search: $.proxy(this.search, this),
-			clearSearch: $.proxy(this.clearSearch, this)
+			clearSearch: $.proxy(this.clearSearch, this),
+
+			// Render
+			render: $.proxy(this.render, this)
 		};
 	};
 
@@ -255,8 +259,7 @@
 		index nodes in a flattened structure
 	*/
 	Tree.prototype.setInitialStates = function (node, level) {
-
-		if (!node.nodes) return;
+		if (!node.nodes) return;	
 		level += 1;
 
 		var parent = node;
@@ -314,6 +317,37 @@
 		});
 	};
 
+	// Tree.prototype.clickHandler = function (event) {
+
+	// 	if (!this.options.enableLinks) event.preventDefault();
+
+	// 	var target = $(event.target);
+	// 	var node = this.findNode(target);
+	// 	if (!node || node.state.disabled) return;
+		
+	// 	var classList = target.attr('class') ? target.attr('class').split(' ') : [];
+	// 	if ((classList.indexOf('expand-icon') !== -1)) {
+
+	// 		this.toggleExpandedState(node, _default.options);
+	// 		this.render();
+	// 	}
+	// 	else if ((classList.indexOf('check-icon') !== -1)) {
+			
+	// 		this.toggleCheckedState(node, _default.options);
+	// 		this.render();
+	// 	}
+	// 	else {
+			
+	// 		if (node.selectable) {
+	// 			this.toggleSelectedState(node, _default.options);
+	// 		} else {
+	// 			this.toggleExpandedState(node, _default.options);
+	// 		}
+
+	// 		this.render();
+	// 	}
+	// };
+
 	Tree.prototype.clickHandler = function (event) {
 
 		if (!this.options.enableLinks) event.preventDefault();
@@ -321,10 +355,10 @@
 		var target = $(event.target);
 		var node = this.findNode(target);
 		if (!node || node.state.disabled) return;
-		
+
+
 		var classList = target.attr('class') ? target.attr('class').split(' ') : [];
 		if ((classList.indexOf('expand-icon') !== -1)) {
-
 			this.toggleExpandedState(node, _default.options);
 			this.render();
 		}
@@ -334,16 +368,52 @@
 			this.render();
 		}
 		else {
-			
 			if (node.selectable) {
 				this.toggleSelectedState(node, _default.options);
 			} else {
-				this.toggleExpandedState(node, _default.options);
+				console.log(node);
+				if(!node.nodes && node.hasChild) {
+					this.addChild(node, node.id);
+				} else {
+					this.toggleExpandedState(node, _default.options);
+				}
 			}
-
 			this.render();
 		}
 	};
+
+	Tree.prototype.addChild = function (node, id) {
+		var parent = node,
+			_this = this;
+		$.getJSON(this.options.categoryUrl + id, function(data) {
+			var subtree = new Array();	
+			$.each(data, function(i, item) {
+				if (i > 0) {
+					if(item.existChild) {
+						subtree.push({
+							id: item.id,
+							text: item.name,
+							hasChild: true,
+							selectable: false
+						})
+					} else {
+						subtree.push({
+							id: item.id,
+							text: item.name,
+							hasChild: false,
+							selectable: false,
+							href: _this.options.resourceUrl + item.id
+						})
+					}
+
+				}
+			});
+			node.nodes = subtree;
+			_this.setInitialStates(node, _this.options.level);
+			_this.toggleExpandedState(node, _default.options);
+			_this.render();
+		});
+	}
 
 	// Looks up the DOM for the closest parent list item to retrieve the
 	// data attribute nodeid, which is used to lookup the node in the flattened structure.

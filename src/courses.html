@@ -42,6 +42,15 @@
         <div class="row">
             <div class="col-xs-3">
                 <div class="aside">
+                    <div id="treedata">
+                        <ul>
+                            <li data-id="3848">感恩教育</li>
+                            <li data-id="3772">百家讲坛</li>
+                            <li data-id="3145">高中课程研修</li>
+                            <li data-id="3299">高中专题</li>
+                            <li data-id="3395">德育教育</li>
+                        </ul>
+                    </div>
                     <div id="treeview"></div>
                 </div>
             </div>
@@ -130,7 +139,7 @@
                                     <a href=""><img src="images/course.jpg" alt=""></a>
                                 </div>
                                 <div class="course-info">
-                                    <div class="title"><a href="">课程课程课程</a></div>
+                                    <div class="title"><a href="">课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程课程</a></div>
                                     <div class="desc"><p>课程描述课程描述课程描述课程描述课程描述课程描述课程描述课程描述</p></div>
                                     <div class="addon">
                                         <span class="author">作者</span>
@@ -205,53 +214,30 @@
 <script type="text/javascript"src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript"src="js/main.min.js"></script>
 <script>
-var tree = [
-  {
-    text: "Parent 1",
-    selectable: false,
-    nodes: [
-      {
-        text: "Child 1",
-        selectable: false,
-        nodes: [
-          {
-            text: "Grandchild 1",
-            selectable: false,
-          },
-          {
-            text: "Grandchild 2",
-            selectable: false,
-          }
-        ]
-      },
-      {
-        text: "Child 2",
-        selectable: false,
-      }
-    ]
-  },
-  {
-    selectable: false,
-    text: "Parent 2"
-  },
-  {
-    selectable: false,
-    text: "Parent 3"
-  },
-  {
-    selectable: false,
-    text: "Parent 4"
-  },
-  {
-    selectable: false,
-    text: "Parent 5"
-  }
-];                  
+var treeData = initTree();
+var tree = $('#treeview').treeview({
+    data: treeData,
+    selectedColor: '#15c288',
+    level: 5,
+    selectedBackColor: '#fff',    
+    categoryUrl: '/dist/test2.json?node=',
+    resourceUrl: '/dist/course?r=',
+    enableLinks: true
+});    
 
-    console.log(tree); 
-    var $tree = $('#treeview').treeview({
-        data: tree,
-    });
+function initTree() {
+    var arr = new Array();
+    $('#treedata li').each(function(i, item) {
+        arr.push({
+            text: $(item).html(),
+            id: $(item).attr('data-id'),
+            selectable: false,
+            hasChild: true
+        })
+    })
+    $('#treedata').remove();
+    return arr;
+}
 </script>
 </body>
 </html>
