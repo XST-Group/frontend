@@ -1,0 +1,35 @@
+#adv-img {
+  img {
+    width: 100%;
+  }
+
+  .img-left {
+    padding-top: 10px;
+    img{
+      height: 302px;
+    }
+    p {
+      position: absolute;
+      top: 60%;
+      margin: 0 20px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+
+  .img-right {
+    .img-right-small {
+      padding: 10px;
+      img{
+        height: 140px;
+      }
+      p {
+        position: absolute;
+        top: 60%;
+        margin: 0 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}
