@@ -1,9 +1,25 @@
 // Variables
-@import "app/variables";
+@import "variable.scss";
 
 // Font-awesome
 @import "font-awesome/font-awesome.scss";
 
-// Components
-@import "app/index.scss";
-@import "app/yunke.scss";
+// Bootstrap
+@import "bootstrap/bootstrap.scss";
+
+// Common part
+@import "common/global.scss";
+@import "common/header.scss";
+@import "common/footer.scss";
+
+// Index
+@import "index/index.scss";
+
+// Courses
+@import "course/courses.scss";
+
+// Groups
+@import "group/group.scss";
+
+// Resources
+@import "resource/resource.scss";

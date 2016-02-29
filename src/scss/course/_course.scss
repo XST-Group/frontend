@@ -1,0 +1,140 @@
+.course {
+  .course-item {
+    position: relative;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    .course-thumb {
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height:auto;
+      }
+    }
+    .course-info {
+      padding: 10px;
+      .title {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 5px;
+        font-weight: bold;
+        height: 40px;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        overflow: hidden;
+      }
+      .desc {
+        font-size: 12px;
+        height: 34px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .addon {
+        padding-top: 5px;
+        font-size: 13px;
+        .free {
+          color: #15c288;
+        }
+        .author {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.video-wrapper {
+  background-color: black;
+  width: 100%;
+  .video {
+    float: left;
+  }
+  .list {
+    width: 280px;
+    height: 505px;
+    background: #2d2d2d;
+    float: left;
+    position: relative;
+    .tabs {
+      font-weight: normal;
+      background: #1a1a1a;
+      float: left;
+      height: 45px;
+      line-height: 45px;
+      overflow: hidden;
+      position: relative;
+      a {
+        float: left;
+        padding: 0 30px;
+        height: 45px;
+        line-height: 45px;
+        color: #8c8c8c;
+        font-size: 16px;
+      }
+    }
+    ul {
+        width: 280px;
+        margin: 0 auto;
+        background: #1a1a1a;
+        height: 460px;
+        overflow-y: auto;
+        float: left;
+        li {
+          border-bottom: 1px solid #222;
+          a {
+            padding: 10px 20px;
+            display: block;
+            height: 90px;
+            &:hover {
+              background-color: rgb(56,56,56);
+              color: #8c8c8c;
+            }
+          }
+        }
+    }
+    .related-item {
+      .video-img {
+        width: 120px;
+        height: 90px;
+        overflow: hidden;
+        margin-right: 10px;
+        float: left;
+      }
+      img {
+        width: 120px;
+        height: auto;
+        background: #565656;
+        float: left;
+      }
+      .video-title {
+        display: block;
+        font-size: 14px;
+        color: #bababa;
+      }
+      .video-stat {
+        font-size: 12px;
+        line-height: 15px;
+        font-style: normal;
+        vertical-align: middle;
+        i {
+          margin: 5px;
+        }
+      }
+    }
+  }
+  object {
+    z-index: 101;
+    position: relative;
+  }
+  object, img {
+    background-color: #000;
+    width: 860px;
+    height: 505px;
+    float: left;
+    display: inline-block;
+  }
+}
+

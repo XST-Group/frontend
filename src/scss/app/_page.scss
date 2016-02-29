@@ -1,0 +1,36 @@
+@import "base";
+@import "main";
+
+#page {
+  margin-top: 1rem;
+  a {
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    background-color: #27292C;
+            border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 6px 0;
+    text-align: center;
+    width: 32px;
+    margin-right: 5px;
+    &:hover {
+      background-color: #34434B;
+    }
+  }
+  a.this {
+    background-color: $minorColor;
+    &:hover {
+      background-color: $minorColor;
+    }
+  }
+  a.pre{
+    display: none;
+  }
+  span {
+    color: #fff;
+    display: inline-block;
+    margin: 0 4px;
+    letter-spacing: 2px;
+  }
+}

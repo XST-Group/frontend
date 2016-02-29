@@ -1,0 +1,30 @@
+.group-item {
+  overflow: hidden;
+  border: 1px solid #eee;
+  .group-thumb {
+    img {
+      width: 100%;
+    }
+  }
+  .group-info {
+    padding: 0 14px;
+    .title {
+      font-size: 14px;
+      color: #444;
+      margin: 13px 0;
+    }
+    .desc {
+      color: #666;
+      font-size: 12px;
+      height: 34px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0 0 10px;
+    }
+    a {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

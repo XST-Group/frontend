@@ -1,0 +1,31 @@
+#beike-nav {
+  background-color: #27292C;
+  display: inline-block;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;;
+  li {
+    display: inline-block;
+    background-color: #27292C;
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    &:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    &:hover {
+      background-color: #34434B;
+    }
+    a {
+      display: inline-block;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 2px;
+      padding: 8px 24px;
+    }
+  }
+  li.now {
+    background-color: $minorColor;
+  }
+}
