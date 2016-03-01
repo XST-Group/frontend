@@ -7,13 +7,22 @@
 // Bootstrap
 @import "bootstrap/bootstrap.scss";
 
-// Custom
+// Common part
 @import "common/global.scss";
 @import "common/header.scss";
 @import "common/footer.scss";
+
+// Index
 @import "index/index.scss";
-@import "course/course.scss";
+
+// Courses
+@import "course/courses.scss";
+
+// Groups
 @import "group/group.scss";
 
+// Resources
+@import "resource/resource.scss";
 
-
+// Commune
+@import "commune/commune.scss";

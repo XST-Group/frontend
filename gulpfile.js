@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),           
     tinylr = require('tiny-lr'),               
     server = tinylr(),
+    browserSync = require('browser-sync'),
     port = 35729,
     livereload = require('gulp-livereload');   
 
@@ -39,6 +40,11 @@ gulp.task('fonts', function () {
 		.pipe(gulp.dest('./dist/fonts'))
 });
 
+gulp.task('player', function () {
+    gulp.src('./src/player/*')
+        .pipe(gulp.dest('./dist/player'))
+});
+
 gulp.task('js', function () {
     gulp.src('./src/js/*.js')
         .pipe(concat('main.js'))
@@ -49,13 +55,27 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./dist/js'));
 });
 
+gulp.task('serve', function() {
+    browserSync({
+        files: "**",
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch('./src/*.html',['html']);
+    gulp.watch('./src/scss/*/*.scss',['css']);
+    gulp.watch('./src/images/**/*',['images']);
+    gulp.watch('./src/js/*.js',['js']);
+    browserSync.reload();
+});
+
 gulp.task('clean', function() {
     gulp.src(['./dist/css', './dist/js', './dist/images', '.dist/fonts'], {read: false})
         .pipe(clean());
 });
 
 gulp.task('default', ['clean'], function(){
-    gulp.start('html','css','images','js', 'fonts');
+    gulp.start('html','css','images','js', 'fonts', 'player');
 });
 
 gulp.task('watch',function(){

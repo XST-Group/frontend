@@ -6,36 +6,38 @@
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="navbar-header pull-left"><a href="/" class="navbar-brand">
-          <img src="images/logo.png" alt="Logo" class="img-responsive" width="90"></a>
-        </div>
-        <nav class="collapse navbar-collapse pull-left">
-          <ul class="navbar-nav nav topmenu">
-            <li><a href="">课程</a></li>
-            <li><a href="">小组</a></li>
-            <li><a href="">活动</a></li>
-            <li><a href="">资讯</a></li>
-            <li><a href="">文库</a></li>
-          </ul>
-        </nav>
-        <div class="pull-right user-nav clearfix">
-          <ul class="nav nav-login">
-            <li><a href="">登录</a></li>
-            <li><a href="">注册</a></li>
-          </ul>
-        </div>
+  <header>
+    <div class="container">
+      <div class="navbar-header pull-left"><a href="/" class="navbar-brand">
+        <img src="images/logo.png" alt="Logo" class="img-responsive" width="90"></a>
       </div>
-    </header>
+      <nav class="collapse navbar-collapse pull-left">
+        <ul class="navbar-nav nav topmenu">
+          <li><a href="courses.html">课程</a></li>
+          <li><a href="groups.html">小组</a></li>
+          <li><a href="activities.html">活动</a></li>
+          <li><a href="news.html">资讯</a></li>
+          <li><a href="resources.html">文库</a></li>
+        </ul>
+      </nav>
+      <div class="pull-right user-nav clearfix">
+        <ul class="nav nav-login">
+          <li><a href="">登录</a></li>
+          <li><a href="">注册</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
     <!-- end of header -->
 
     <section class="poster">
       <div class="slider">
         <div class="banner">
           <ul>
-            <li style="background-image: url('images/03.jpg');"></li>
+            <li style="background-image: url('images/01.jpg');"></li>
             <li style="background-image: url('images/02.jpg');"></li>
+            <li style="background-image: url('images/03.jpg');"></li>
+            <li style="background-image: url('images/04.jpg');"></li>
           </ul>
         </div>
         <a href="#" class="unslider-arrow prev"><i class="fa fa-angle-left"></i></a>
@@ -238,6 +240,7 @@
               <p><i class="fa fa-envelope"></i>1234567@qq.com</p>
             </div>
           </div>
+          </div>
         </div>
       </div>
       <div class="copyright">
@@ -257,6 +260,8 @@
         });
         $('.unslider-arrow').click(function() {
           var fn = this.className.split(' ')[1];
+
+          //  Either do unslider.data('unslider').next() or .prev() depending on the className
           unslider.data('unslider')[fn]();
         });
       });

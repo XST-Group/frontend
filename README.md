@@ -1,6 +1,8 @@
 ﻿# xst-frontend
 校视通工程前端部分
 
+**2016-02-27更新：**使用gulp+browser-sync进行实时开发
+
 ## 如何搭建环境
 前端开发部分使用gulp+livereload+http-server的形式
 
@@ -31,24 +33,14 @@ $ npm install
 ```
 **Note:**若npm速度过慢，可以自行百度npm如何换源，使用国内源安装
 
-### 安装livereload插件
-这个可能需要翻墙，自行安装
+### 实时更新
 
-### 运行
-进入项目目录，运行http-server,默认端口为8080，若冲突可以加参数`-p 8000(自行修改）`修改
-```
-$ http-client
-```
-
-然后使用gulp
-```
-$ gulp 
-$ gulp watch
-```
-之后gulp就开始监听了
-
+<<<<<<< HEAD
 然后打开chrome或者firefox，点击安装好的livereload插件（图标从空心变成实心）
 然后所有的步骤就运行完毕了，可以直接开始编码了，所有的修改不用刷新直接会出现在浏览器中了
 
 
 K0I
+=======
+现在已经改为gulp配合browser-sync进行开发，我已经修改好了gulp.js，开发的时候只要执行gulp serve就OK了
+>>>>>>> c8c86efb10bdbb3b450ef3d3cce2272789177c10

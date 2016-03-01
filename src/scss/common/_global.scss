@@ -18,6 +18,10 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .btn-primary {
   color: #fff !important;
   background: $button-primary-bg;
@@ -25,5 +29,56 @@ ul {
   &:hover {
     background-color: darken($button-primary-bg, 5%);
     border: 1px solid darken($button-primary-bg, 5%);
+  }
+}
+
+.main {
+  padding: 10px 0;
+}
+
+h3.main-title {
+  margin-top: 0;
+  padding-left: 15px;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  margin-bottom: 5px;
+  li {
+    a {
+      color: #bbb;
+      font-size: 13px;
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
+.pagination {
+  li {
+    a {
+      margin: 5px;
+    }
+  }
+  .active {
+    a {
+      cursor: default;
+      color: #fff;
+      background-color: #46c37b;
+      border-color: #34a263;
+      &:hover {
+        background-color: #46c37b;
+        border-color: #34a263;
+      }
+    }
   }
 }
