@@ -1,6 +1,11 @@
+.line{
+  	border-top: 2px solid #eee;
+  	width: 95%;
+  	margin-left: auto;
+  	margin-right: auto;
 
+}
 #advisory-hit-topic{
 	@import "aside.scss";
-
 	@import "topic-main.scss";
 }

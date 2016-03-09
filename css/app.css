@@ -8503,12 +8503,27 @@ footer {
     font-size: 14px;
     font-weight: bold; }
 
-#advisory-hit-topic .aside {
-  height: 400px; }
+.line {
+  border-top: 2px solid #eee;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+#advisory-hit-topic .aside li {
+  cursor: default; }
   #advisory-hit-topic .aside li:hover {
     color: inherit; }
   #advisory-hit-topic .aside li .title {
-    font-size: 15px; }
+    font-size: 14px; }
+  #advisory-hit-topic .aside li .text {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  #advisory-hit-topic .aside li .docs {
+    font-size: 14px; }
 
 #advisory-hit-topic .article {
   border: 1px solid #eee; }
@@ -8517,15 +8532,15 @@ footer {
     #advisory-hit-topic .article .img img {
       width: 750px; }
   #advisory-hit-topic .article .article-main {
-    font-size: 17px;
-    letter-spacing: 2px; }
+    font-size: 12px;
+    letter-spacing: 1px; }
     #advisory-hit-topic .article .article-main .paragraphy {
       color: #222222;
       display: block;
       text-indent: 20px;
       margin: 20px; }
     #advisory-hit-topic .article .article-main .label-ad ul {
-      font-size: 15px;
+      font-size: 12px;
       margin: 35px; }
       #advisory-hit-topic .article .article-main .label-ad ul li {
         width: 45px;
@@ -8536,18 +8551,15 @@ footer {
         display: inline;
         color: white;
         margin: 5px; }
-  #advisory-hit-topic .article .line {
-    border-top: 2px solid #eee;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto; }
+        #advisory-hit-topic .article .article-main .label-ad ul li:hover {
+          cursor: pointer; }
   #advisory-hit-topic .article .addon {
     margin: 15px 0px; }
     #advisory-hit-topic .article .addon span {
       font-size: 15px; }
     #advisory-hit-topic .article .addon .good {
       padding: 12px;
-      font-size: 23px;
+      font-size: 17px;
       margin-left: 20px;
       margin-bottom: 0px; }
       #advisory-hit-topic .article .addon .good .fa-thumbs-up {
@@ -8556,13 +8568,15 @@ footer {
         padding: 10px;
         color: white; }
     #advisory-hit-topic .article .addon .contact-icon {
-      padding: 10px;
+      padding: 9px;
       font-size: 15px;
       border-radius: 50%;
       -webkit-transition: all .3s ease;
       -moz-transition: all .3s ease;
       -o-transition: all .3s ease;
       transition: all .3s ease; }
+      #advisory-hit-topic .article .addon .contact-icon span {
+        font-size: 12px; }
       #advisory-hit-topic .article .addon .contact-icon .fa-weibo {
         background-color: #E6162D;
         color: white; }
@@ -8601,4 +8615,24 @@ footer {
     #advisory-hit-topic .comment .comment-main:focus {
       background-color: white; }
   #advisory-hit-topic .comment button {
-    margin-top: 20px; }
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #advisory-hit-topic .comment .comment-cur {
+    margin: 10px 0px;
+    font-size: 12px; }
+    #advisory-hit-topic .comment .comment-cur .top {
+      margin-top: 15px; }
+      #advisory-hit-topic .comment .comment-cur .top img {
+        margin-top: 7px;
+        height: 34px; }
+      #advisory-hit-topic .comment .comment-cur .top .mid {
+        margin-top: 5px;
+        margin-left: -20px; }
+    #advisory-hit-topic .comment .comment-cur .below .time {
+      margin-left: -20px;
+      color: #cbbcc9; }
+    #advisory-hit-topic .comment .comment-cur .below .reply {
+      padding-right: 12px;
+      border-right: 3px solid #dfdfdf; }
+    #advisory-hit-topic .comment .comment-cur .below .fa-thumbs-o-up {
+      padding-left: 10px; }
