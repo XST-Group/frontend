@@ -9,7 +9,7 @@ function getFlashHtml(playUrl,replaceObj){
 	config.id = 'VJTVPlayer';
 	config.width = '100%';
 	config.height = '100%';
-	config.swfUrl = '/dist/player/VJTVPlayer.swf';
+	config.swfUrl = '/xst/assets/player/VJTVPlayer.swf';
 	config.vars.src = playUrl;
 	config.vars.speedurl = '/assets/download/VJOcx3-ch-full-setup.exe';
 	config.vars.point = '/xmlurl/marks?id='+213;

@@ -7927,6 +7927,13 @@ li {
     background-color: #13ab78;
     border: 1px solid #13ab78; }
 
+.transition {
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out; }
+
 .main {
   padding: 10px 0; }
 
@@ -8218,7 +8225,8 @@ footer {
   margin-bottom: 15px; }
   .course .course-item .course-thumb {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 180px; }
     .course .course-item .course-thumb img {
       width: 100%;
       height: auto; }
@@ -8281,7 +8289,10 @@ footer {
       background: #1a1a1a;
       height: 460px;
       overflow-y: auto;
-      float: left; }
+      float: left;
+      scrollbar-track-color: #000; }
+      .video-wrapper .list ul ::-webkit-scrollbar-track {
+        background-color: #000; }
       .video-wrapper .list ul li {
         border-bottom: 1px solid #222; }
         .video-wrapper .list ul li a {
@@ -8292,8 +8303,8 @@ footer {
             background-color: #383838;
             color: #8c8c8c; }
     .video-wrapper .list .related-item .video-img {
-      width: 120px;
-      height: 90px;
+      width: 100px;
+      height: 80px;
       overflow: hidden;
       margin-right: 10px;
       float: left; }
@@ -8304,8 +8315,11 @@ footer {
       float: left; }
     .video-wrapper .list .related-item .video-title {
       display: block;
-      font-size: 14px;
-      color: #bababa; }
+      font-size: 12px;
+      color: #bababa;
+      max-height: 32px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .video-wrapper .list .related-item .video-stat {
       font-size: 12px;
       line-height: 15px;
@@ -8434,9 +8448,6 @@ footer {
       margin: 10px; }
     .resource-result .result-item i {
       margin-right: 5px; }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 .subject {
   margin-bottom: 16px; }
@@ -8452,27 +8463,25 @@ footer {
       background-color: #F3F3F3; }
     .subject li a {
       padding: 4px 10px; }
->>>>>>> wdj
-=======
 
 #adv-article .floor {
   margin-top: 20px;
   padding: 20px 10px;
   border: 2px solid white;
   transition-duration: 0.5s; }
-  #adv-article .floor:hover {
-    border: 2px solid #15c288; }
   #adv-article .floor img {
-    width: 350px;
-    height: auto; }
+    height: 100%; }
   #adv-article .floor .title {
-    padding: 20px 0; }
+    padding: 10px 0; }
     #adv-article .floor .title a {
       font-size: 20px;
       font-weight: bold; }
   #adv-article .floor .decs {
-    font-size: 16px;
-    padding: 10px 0; }
+    font-size: 15px;
+    padding: 10px 0;
+    max-height: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   #adv-article .floor .time {
     font-size: 13px;
     padding: 10px 0;
@@ -8482,6 +8491,15 @@ footer {
   margin-top: 15px;
   margin-bottom: 0px;
   border-top: 1px dashed #ddd; }
+
+#adv-article i {
+  margin-right: 5px; }
+
+.adv-article .image-wrapper {
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+  display: block; }
 
 #adv-img img {
   width: 100%; }
@@ -8507,4 +8525,3 @@ footer {
     margin: 0 20px;
     font-size: 14px;
     font-weight: bold; }
->>>>>>> 17604caa9903f7d483902a7305b385e5ea4c9e0a
