@@ -1,0 +1,25 @@
+.comment{
+        border: $border;
+        margin-top: 20px;
+        padding: 20px;
+        .title{
+          font-size: 19px;
+          font-weight: bolder;
+        }
+        .comment-main{
+          margin-top: 10px;
+          border: $border;
+          height: 150px;
+          padding: 10px;
+          background: $text-area;
+          width: 100%;
+          @include hove-time;
+          &:focus{
+            background-color: white;
+          }
+        }
+        button{
+          margin-top: 20px;
+        }
+
+      }

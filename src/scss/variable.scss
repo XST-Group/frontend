@@ -38,6 +38,22 @@ $minorColor: #ED6345;
 //Comminue
 $subject-span: #F3F3F3;
 
-//advisory
+//Advisory
 $ad_color: #666;
 $adhove_color: #15c288;
+
+
+//Advisory-hit
+$border:1px solid #eee;
+$blue_d:#3da9f7;
+$blue_hover:#1F98D9;
+$red_hover:#E6162D;
+$green_hover:#15C286;
+$text-area:#f3f7fb;
+
+@mixin hove-time {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}

@@ -1,0 +1,91 @@
+.article{
+        border: $border;
+        .img{
+          text-align: center;
+          img{
+            width: 750px;
+          }
+        }
+        .article-main{
+          font-size: 17px;
+          letter-spacing: 2px;
+          .paragraphy{
+            color: darken(#eee,80%);
+            //font-weight: bold;
+            display: block;
+            text-indent: 20px;
+            margin: 20px;
+          }
+          .label-ad{
+            ul{
+              font-size: 15px;
+              //margin-left: 10px;
+              margin:35px;
+              span{
+
+              }
+              li{
+                width: 45px;
+                text-align: center;
+                border-radius: 5px;
+                padding: 5px 5px;
+                background-color: #82b5e8;
+                display: inline;
+                color: white;
+                margin: 5px;
+              }
+            }
+          }
+        }
+        .line{
+          border-top: 2px solid #eee;
+          width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .addon{
+          margin: 15px 0px;
+          span{
+            font-size: 15px;
+          }
+          .good{
+            padding:12px;
+            font-size: 23px;
+            margin-left: 20px;
+            margin-bottom: 0px;
+            .fa-thumbs-up{
+              border-radius: 50%;
+              background-color:#7791b0;
+              padding: 10px;
+              color:white;
+            }
+          }
+          .contact-icon{
+            padding:10px;
+            font-size: 15px;
+            border-radius: 50%;
+            @include hove-time;
+            .fa-weibo{
+              background-color: $red_hover;
+              color: white;
+            }
+            .fa-weixin{
+              padding-left: 10px;
+              padding-right: 10px;
+              background-color: $green_hover;
+              color: white;
+            }
+            .fa-qq{
+              background-color: $blue_hover;
+              color: white;
+            }
+            .fa-renren{
+              background-color: $blue_hover;
+              color: white;
+            }
+          }
+          .people{
+            padding-left: 34px;
+          }
+        }
+      }
