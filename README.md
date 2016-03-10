@@ -36,3 +36,4 @@ $ npm install
 ### 实时更新
 
 现在已经改为gulp配合browser-sync进行开发，我已经修改好了gulp.js，开发的时候只要执行gulp serve就OK了
+

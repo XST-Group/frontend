@@ -242,7 +242,12 @@ li {
   .slider .prev:hover,
   .slider .next:hover {
     color: #36AF6D;
+<<<<<<< HEAD
+    opacity: 1;
+    filter: alpha(opacity=100); }
+=======
     opacity: 1; }
+>>>>>>> c8c86efb10bdbb3b450ef3d3cce2272789177c10
 
 @font-face {
   font-family: 'msyh';

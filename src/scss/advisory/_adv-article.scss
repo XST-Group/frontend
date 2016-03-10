@@ -1,0 +1,47 @@
+#adv-article {
+  .floor {
+    margin-top: 20px;
+    padding: 20px 10px;
+    border: 2px solid white;
+    transition-duration: 0.5s;
+    img {
+      height: 100%;
+    }
+    .title {
+      padding: 10px 0;
+      a {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .decs {
+      font-size: 15px;
+      padding: 10px 0;
+      max-height: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;      
+    }
+    .time {
+      font-size: 13px;
+      padding: 10px 0;
+      color: #999;
+    }
+  }
+  .line {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border-top: 1px dashed #ddd;
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+.adv-article {
+  .image-wrapper{
+    width: 320px;
+    height: 180px;
+    overflow: hidden;
+    display: block;
+  }
+}
