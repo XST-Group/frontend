@@ -1,11 +1,22 @@
-    .aside{
-      height: 400px;
+.aside{
       li{
+        cursor: default;
         &:hover{
           color: inherit;
         }
         .title{
-          font-size: 15px;
+          font-size: 14px;
+        }
+        .text{
+          margin-top: 7px;
+          margin-bottom: 5px;
+          font-size: 12px;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .docs{
+          font-size: 14px;
         }
       }
     }
