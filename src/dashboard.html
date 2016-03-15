@@ -48,7 +48,7 @@
 
     <div class="dash-outer">
 
-      <nav>
+      <nav class="dash-nav">
         <header>
           <div class="profile">
             用户名
@@ -94,8 +94,83 @@
         </ul>
       </nav>
 
-      <main role="main">
+      <main role="main" class="dash-main">
+        <form>
+          <div class="form-group">
+            <label for="example1">example1</label>
+            <input type="text" class="form-control" id="example1" placeholder="">
+          </div>
+          <div class="form-group">
+            <label for="example2">example2</label>
+            <input type="text" class="form-control" id="example2" placeholder="">
+          </div>
+          <div class="select">
+            <span>选择</span>
+            <select class="form-control">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+              <option>Option 4</option>
+              <option>Option 5</option>
+            </select>
+          </div>
+          <div class="radio">
+            <span>选择</span>
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Option 1
+            </label>
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Option 2
+            </label>
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Option 3
+            </label>
+          </div>
+          <textarea class="form-control" rows="3"></textarea>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
 
+
+        <div class="dash-table">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>手机</th>
+                <th>学号</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>000</td>
+                  <td>000</td>
+                  <td>000</td>
+                  <td>000</td>
+                  <td>000</td>
+                </tr>
+            </tbody>
+          </table>
+          <nav class="page">
+            <ul class="pagination">
+              <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
       </main>
 
