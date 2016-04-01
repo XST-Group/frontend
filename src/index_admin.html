@@ -10,15 +10,13 @@
 
     <!--<link href='http://fonts.useso.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="css/app.min.css"/>
-    <link rel="stylesheet" href="css/theme.css">
 
     <script type="text/javascript"src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-<div class="main">
-    <div class="container">
+
         <!--------------------
                 header
         --------------------->
@@ -84,20 +82,6 @@
                         </ul>
                     </li>
 
-                    <script>
-                        $(document).ready(function () {
-                            $(".sidebar-nav a").click(function(){
-                                var tree="."+$(this).attr("data-target");
-                                $(tree).slideToggle(300);
-                                if($(this).hasClass("collapsed")){
-                                    $(this).removeClass("collapsed");
-                                }else{
-                                    $(this).addClass("collapsed");
-                                }
-                            })
-                        });
-                    </script>
-
                     <li>
                         <a href="#" data-target="dashboard-menu3" class="nav-header">
                             <i class="fa fa-fw fa-group"></i>&nbsp;&nbsp;小组管理<i class="fa fa-collapse"></i>
@@ -123,11 +107,20 @@
                 这里开始
             </div>
         </div>
-    </div>
 
-</div>
-
-
+<script>
+    $(document).ready(function () {
+        $(".sidebar-nav a").click(function(){
+            var tree="."+$(this).attr("data-target");
+            $(tree).slideToggle(300);
+            if($(this).hasClass("collapsed")){
+                $(this).removeClass("collapsed");
+            }else{
+                $(this).addClass("collapsed");
+            }
+        })
+    });
+</script>
 
 </body>
 </html>
