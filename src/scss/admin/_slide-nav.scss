@@ -1,0 +1,91 @@
+      .sidebar-nav {
+        width: 240px;
+        position: absolute;
+        float: left;
+        .nav-header {
+          border-top: 1px solid #fcfcfc;
+          border-bottom: 1px solid #c8c8cb;
+          background: #efeff0;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, #fafafa));
+          background: -ms-linear-gradient(bottom, #efeff0, #fafafa);
+          background: -moz-linear-gradient(center bottom, #efeff0 0%, #fafafa 100%);
+          color: #444;
+          display: block;
+          font-weight: normal;
+          font-size: 1em;
+          line-height: 2.5em;
+          padding: .25em .25em .25em 1em;
+          &:hover {
+            background: #efeff0;
+            background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, #ffffff));
+            background: -ms-linear-gradient(bottom, #efeff0, #ffffff);
+            background: -moz-linear-gradient(center bottom, #efeff0 0%, #ffffff 100%);
+            background: -o-linear-gradient(bottom, #efeff0, #ffffff);
+            filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#efeff0')";
+          }
+          /*改变箭头方向*/
+          &.collapsed{
+            .fa-collapse{
+              float: right;
+              &:before{
+                content: "\f078";
+              }
+            }
+          }
+          .fa-collapse{
+            float: right;
+            &:before{
+              content: "\f077";
+            }
+          }
+          i[class*="fa-"] {
+            line-height: 2.25em;
+            padding-right: .75em;
+          }
+        }
+
+        .nav-list {
+          background: #fafafa;
+          > {
+            li > a:hover {
+              background: #d2d2dd;
+            }
+            .active > a {
+              text-shadow: none;
+              background: #e5e5ea;
+              border-top: 1px solid #d0d0d6;
+              border-bottom: 1px solid #d0d0d6;
+              &:hover {
+                text-shadow: none;
+                background: #e5e5ea;
+                border-top: 1px solid #d0d0d6;
+                border-bottom: 1px solid #d0d0d6;
+              }
+            }
+          }
+          > {
+            li:hover {
+              border-left: 4px solid #8989a6;
+              overflow: hidden;
+              a {
+                margin-left: -4px;
+              }
+            }
+            .active {
+              overflow: hidden;
+              border-left: 4px solid #909096;
+              a {
+                margin-left: -4px;
+              }
+              > a:hover {
+                background: #c3c3d2;
+              }
+            }
+            li > a {
+              color: #222;
+              padding: .5em 1em;
+            }
+          }
+        }
+      }
