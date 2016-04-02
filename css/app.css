@@ -8538,7 +8538,7 @@ footer {
     color: inherit; }
   #advisory-hit-topic .aside li .title {
     font-size: 14px; }
-  #advisory-hit-topic .aside li .text {
+  #advisory-hit-topic .aside li .text, #advisory-hit-topic .aside li .admin .content table tr .title, .admin .content table tr #advisory-hit-topic .aside li .title {
     margin-top: 7px;
     margin-bottom: 5px;
     font-size: 12px;
@@ -9001,3 +9001,18 @@ footer {
   margin-left: 240px;
   border-left: 1px solid #cccccc;
   padding: 15px 15px 0px 15px; }
+
+.admin .content .button-group {
+  display: inline; }
+  .admin .content .button-group .input-group {
+    width: 200px;
+    display: inline-table; }
+
+.admin .content table {
+  table-layout: fixed; }
+  .admin .content table tr .text, .admin .content table tr .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .admin .content table tr .title {
+    width: 80%; }
