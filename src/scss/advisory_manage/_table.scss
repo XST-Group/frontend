@@ -1,0 +1,19 @@
+    table{
+      table-layout:fixed;
+      //width: 100;
+
+
+      tr{
+        .text{
+          overflow: hidden;
+          white-space: nowrap;    //文本不换行
+          text-overflow: ellipsis;
+          //word-break:keep-all;
+        }
+        .title{
+          @extend .text;
+          width: 80%;
+        }
+
+      }
+    }
