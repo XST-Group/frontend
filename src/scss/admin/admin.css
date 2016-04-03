@@ -1,105 +1,181 @@
 @charset "GBK";
-.admin .navbar {
-  background: #4d5b76;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6f80a1));
-  background: -ms-linear-gradient(bottom, #4d5b76, #6f80a1);
-  background: -moz-linear-gradient(center bottom, #4d5b76 0%, #6f80a1 100%);
-  background: -o-linear-gradient(bottom, #4d5b76, #6f80a1);
-  filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f80a1',EndColorStr='#4d5b76')";
-  box-shadow: 0px 0px 3px #cccccc;
-  padding: 0em 1em;
-  margin: 0px;
-  background-clip: padding-box; }
-  .admin .navbar .navbar-brand {
-    color: #fff; }
-  .admin .navbar .navbar-user .dropdown-toggle:hover {
-    background-color: #565656; }
-  .admin .navbar .nav > li > a {
-    color: #fff;
-    text-shadow: none; }
-  .admin .navbar .nav > li:hover {
-    background-color: #444; }
-  .admin .navbar .nav > li > a:hover {
-    color: #fff; }
-  .admin .navbar .dropdown-menu {
-    left: 0; }
-    .admin .navbar .dropdown-menu a:hover {
-      background: none;
-      color: #000; }
-  .admin .navbar .nav li.dropdown.open > .dropdown-toggle {
-    background-color: #444;
-    color: #fff; }
-.admin .sidebar-nav {
-  width: 240px;
-  position: absolute;
-  float: left; }
-  .admin .sidebar-nav .nav-header {
-    border-top: 1px solid #fcfcfc;
-    border-bottom: 1px solid #c8c8cb;
-    background: #efeff0;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, #fafafa));
-    background: -ms-linear-gradient(bottom, #efeff0, #fafafa);
-    background: -moz-linear-gradient(center bottom, #efeff0 0%, #fafafa 100%);
-    color: #444;
-    display: block;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 2.5em;
-    padding: .25em .25em .25em 1em;
-    /*改变箭头方向*/ }
-    .admin .sidebar-nav .nav-header:hover {
-      background: #efeff0;
-      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, white));
-      background: -ms-linear-gradient(bottom, #efeff0, white);
-      background: -moz-linear-gradient(center bottom, #efeff0 0%, white 100%);
-      background: -o-linear-gradient(bottom, #efeff0, white);
+.main {
+  padding: 0px;
+  margin: 0px; }
+  .main .container {
+    width: 100%;
+    padding: 0px; }
+    .main .container .admin .navbar {
+      background: #4d5b76;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6f80a1));
+      background: -ms-linear-gradient(bottom, #4d5b76, #6f80a1);
+      background: -moz-linear-gradient(center bottom, #4d5b76 0%, #6f80a1 100%);
+      background: -o-linear-gradient(bottom, #4d5b76, #6f80a1);
       filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
-      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#efeff0')"; }
-    .admin .sidebar-nav .nav-header.collapsed .fa-collapse {
-      float: right; }
-      .admin .sidebar-nav .nav-header.collapsed .fa-collapse:before {
-        content: "\f078"; }
-    .admin .sidebar-nav .nav-header .fa-collapse {
-      float: right; }
-      .admin .sidebar-nav .nav-header .fa-collapse:before {
-        content: "\f077"; }
-    .admin .sidebar-nav .nav-header i[class*="fa-"] {
-      line-height: 2.25em;
-      padding-right: .75em; }
-  .admin .sidebar-nav .nav-list {
-    background: #fafafa; }
-    .admin .sidebar-nav .nav-list > li > a:hover {
-      background: #d2d2dd; }
-    .admin .sidebar-nav .nav-list > .active > a {
-      text-shadow: none;
-      background: #e5e5ea;
-      border-top: 1px solid #d0d0d6;
-      border-bottom: 1px solid #d0d0d6; }
-      .admin .sidebar-nav .nav-list > .active > a:hover {
-        text-shadow: none;
-        background: #e5e5ea;
-        border-top: 1px solid #d0d0d6;
-        border-bottom: 1px solid #d0d0d6; }
-    .admin .sidebar-nav .nav-list > li:hover {
-      border-left: 4px solid #8989a6;
-      overflow: hidden; }
-      .admin .sidebar-nav .nav-list > li:hover a {
-        margin-left: -4px; }
-    .admin .sidebar-nav .nav-list > .active {
-      overflow: hidden;
-      border-left: 4px solid #909096; }
-      .admin .sidebar-nav .nav-list > .active a {
-        margin-left: -4px; }
-      .admin .sidebar-nav .nav-list > .active > a:hover {
-        background: #c3c3d2; }
-    .admin .sidebar-nav .nav-list > li > a {
-      color: #222;
-      padding: .5em 1em; }
-.admin .content {
-  position: relative;
-  min-height: 800px;
-  background: #fff;
-  margin-left: 240px;
-  border-left: 1px solid #cccccc;
-  padding: 15px 15px 0px 15px; }
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f80a1',EndColorStr='#4d5b76')";
+      box-shadow: 0px 0px 3px #cccccc;
+      padding: 0em 1em;
+      margin: 0px;
+      background-clip: padding-box; }
+      .main .container .admin .navbar .navbar-brand {
+        color: #fff; }
+      .main .container .admin .navbar .navbar-user .dropdown-toggle:hover {
+        background-color: #565656; }
+      .main .container .admin .navbar .nav > li > a {
+        color: #fff;
+        text-shadow: none; }
+      .main .container .admin .navbar .nav > li:hover {
+        background-color: #444; }
+      .main .container .admin .navbar .nav > li > a:hover {
+        color: #fff; }
+      .main .container .admin .navbar .dropdown-menu {
+        left: 0; }
+        .main .container .admin .navbar .dropdown-menu a:hover {
+          background: none;
+          color: #000; }
+      .main .container .admin .navbar .nav li.dropdown.open > .dropdown-toggle {
+        background-color: #444;
+        color: #fff; }
+    .main .container .admin .sidebar-nav {
+      width: 240px;
+      position: absolute;
+      float: left; }
+      .main .container .admin .sidebar-nav .nav-header {
+        border-top: 1px solid #fcfcfc;
+        border-bottom: 1px solid #c8c8cb;
+        background: #efeff0;
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, #fafafa));
+        background: -ms-linear-gradient(bottom, #efeff0, #fafafa);
+        background: -moz-linear-gradient(center bottom, #efeff0 0%, #fafafa 100%);
+        color: #444;
+        display: block;
+        font-weight: normal;
+        font-size: 1em;
+        line-height: 2.5em;
+        padding: .25em .25em .25em 1em;
+        /*改变箭头方向*/ }
+        .main .container .admin .sidebar-nav .nav-header:hover {
+          background: #efeff0;
+          background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #efeff0), color-stop(1, white));
+          background: -ms-linear-gradient(bottom, #efeff0, white);
+          background: -moz-linear-gradient(center bottom, #efeff0 0%, white 100%);
+          background: -o-linear-gradient(bottom, #efeff0, white);
+          filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff',EndColorStr='#efeff0')"; }
+        .main .container .admin .sidebar-nav .nav-header.collapsed .fa-collapse {
+          float: right; }
+          .main .container .admin .sidebar-nav .nav-header.collapsed .fa-collapse:before {
+            content: "\f078"; }
+        .main .container .admin .sidebar-nav .nav-header .fa-collapse {
+          float: right; }
+          .main .container .admin .sidebar-nav .nav-header .fa-collapse:before {
+            content: "\f077"; }
+        .main .container .admin .sidebar-nav .nav-header i[class*="fa-"] {
+          line-height: 2.25em;
+          padding-right: .75em; }
+      .main .container .admin .sidebar-nav .nav-list {
+        background: #fafafa; }
+        .main .container .admin .sidebar-nav .nav-list > li > a:hover {
+          background: #d2d2dd; }
+        .main .container .admin .sidebar-nav .nav-list > .active > a {
+          text-shadow: none;
+          background: #e5e5ea;
+          border-top: 1px solid #d0d0d6;
+          border-bottom: 1px solid #d0d0d6; }
+          .main .container .admin .sidebar-nav .nav-list > .active > a:hover {
+            text-shadow: none;
+            background: #e5e5ea;
+            border-top: 1px solid #d0d0d6;
+            border-bottom: 1px solid #d0d0d6; }
+        .main .container .admin .sidebar-nav .nav-list > li:hover {
+          border-left: 4px solid #8989a6;
+          overflow: hidden; }
+          .main .container .admin .sidebar-nav .nav-list > li:hover a {
+            margin-left: -4px; }
+        .main .container .admin .sidebar-nav .nav-list > .active {
+          overflow: hidden;
+          border-left: 4px solid #909096; }
+          .main .container .admin .sidebar-nav .nav-list > .active a {
+            margin-left: -4px; }
+          .main .container .admin .sidebar-nav .nav-list > .active > a:hover {
+            background: #c3c3d2; }
+        .main .container .admin .sidebar-nav .nav-list > li > a {
+          color: #222;
+          padding: .5em 1em; }
+    .main .container .admin .content {
+      position: relative;
+      min-height: 800px;
+      background: #D9E0E7;
+      margin-left: 240px;
+      border-left: 1px solid #cccccc;
+      padding: 40px 40px 20px 40px; }
+      .main .container .admin .content .course-list,
+      .main .container .admin .content .video-add {
+        background-color: #fff;
+        border-radius: 6px;
+        margin-bottom: 40px; }
+        .main .container .admin .content .course-list h2,
+        .main .container .admin .content .video-add h2 {
+          font-size: 14px;
+          font-weight: bold;
+          background-color: #2D353C;
+          margin: 0;
+          margin-bottom: 20px;
+          padding: 12px 20px;
+          letter-spacing: 2px;
+          color: #fff;
+          border-top-right-radius: 6px;
+          border-top-left-radius: 6px; }
+    .main .container .admin .course-list .table,
+    .main .container .admin .course-list .page {
+      padding-left: 20px;
+      border: 3px solid red;
+      padding-right: 20px; }
+    .main .container .admin .video-add {
+      width: 460px;
+      padding-bottom: 20px; }
+      .main .container .admin .video-add > .form-group,
+      .main .container .admin .video-add .select,
+      .main .container .admin .video-add .radio,
+      .main .container .admin .video-add .descibe,
+      .main .container .admin .video-add button {
+        margin-left: 30px;
+        margin-right: 30px; }
+        .main .container .admin .video-add > .form-group > span,
+        .main .container .admin .video-add .select > span,
+        .main .container .admin .video-add .radio > span,
+        .main .container .admin .video-add .descibe > span,
+        .main .container .admin .video-add button > span {
+          font-weight: bold; }
+      .main .container .admin .video-add .form-info label {
+        display: inline-block;
+        margin-right: 16px; }
+      .main .container .admin .video-add .form-info input {
+        display: inline-block;
+        width: 70%; }
+      .main .container .admin .video-add .select span {
+        display: inline-block;
+        margin-right: 16px; }
+      .main .container .admin .video-add .select select.form-control {
+        display: inline-block;
+        width: 50%; }
+      .main .container .admin .video-add .radio {
+        margin-bottom: 18px;
+        margin-top: 18px; }
+        .main .container .admin .video-add .radio span {
+          display: inline-block;
+          margin-right: 16px; }
+        .main .container .admin .video-add .radio label {
+          margin-right: 14px; }
+      .main .container .admin .video-add .inputFile {
+        margin-bottom: 20px;
+        margin-top: 20px; }
+        .main .container .admin .video-add .inputFile label, .main .container .admin .video-add .inputFile input {
+          display: inline-block; }
+        .main .container .admin .video-add .inputFile label {
+          margin-right: 16px; }
+      .main .container .admin .video-add .descibe {
+        margin-bottom: 16px; }
+        .main .container .admin .video-add .descibe span {
+          display: block;
+          margin-bottom: 6px; }

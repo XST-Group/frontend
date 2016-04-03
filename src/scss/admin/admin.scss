@@ -1,7 +1,16 @@
+.main{
+  padding: 0px;
+  margin: 0px;
+  .container{
+    width: 100%;
+    padding: 0px;
 
     .admin{
 	@import "navbar.scss";
 	@import "slide-nav.scss";
 	@import "content.scss";
-
+  @import "course-list.scss";
+  @import "video-add.scss";
     }
+  }
+}
