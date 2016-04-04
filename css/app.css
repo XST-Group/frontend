@@ -9022,69 +9022,31 @@ footer {
           color: #fff;
           border-top-right-radius: 6px;
           border-top-left-radius: 6px; }
-    .main .container .admin .course-list .table,
-    .main .container .admin .course-list .page {
-      padding-left: 20px;
-      padding-right: 20px; }
-    .main .container .admin .video-add {
-      width: 360px;
-      padding-bottom: 20px; }
-      .main .container .admin .video-add > .form-group,
-      .main .container .admin .video-add .select,
-      .main .container .admin .video-add .radio,
-      .main .container .admin .video-add .descibe,
-      .main .container .admin .video-add button {
-        margin-left: 30px;
-        margin-right: 30px; }
-        .main .container .admin .video-add > .form-group > span,
-        .main .container .admin .video-add .select > span,
-        .main .container .admin .video-add .radio > span,
-        .main .container .admin .video-add .descibe > span,
-        .main .container .admin .video-add button > span {
-          font-weight: bold; }
-      .main .container .admin .video-add .form-info label {
-        display: inline-block;
-        margin-right: 16px; }
-      .main .container .admin .video-add .form-info input {
-        display: inline-block;
-        width: 65%; }
-      .main .container .admin .video-add .select div {
-        margin-bottom: 16px; }
-        .main .container .admin .video-add .select div span {
-          font-weight: bold;
-          display: inline-block;
-          margin-right: 16px; }
-        .main .container .admin .video-add .select div select.form-control {
-          display: inline-block;
-          width: 65%; }
-      .main .container .admin .video-add .radio {
-        margin-bottom: 18px;
-        margin-top: 18px; }
-        .main .container .admin .video-add .radio span {
-          display: inline-block;
-          margin-right: 16px; }
-        .main .container .admin .video-add .radio label {
-          margin-right: 14px; }
-      .main .container .admin .video-add .inputFile {
-        margin-bottom: 20px;
-        margin-top: 20px; }
-        .main .container .admin .video-add .inputFile label, .main .container .admin .video-add .inputFile input {
-          display: inline-block; }
-        .main .container .admin .video-add .inputFile label {
-          margin-right: 16px; }
-        .main .container .admin .video-add .inputFile input {
-          width: 65%; }
-        .main .container .admin .video-add .inputFile .help-block {
-          margin-left: 80px;
-          font-size: 12px; }
-      .main .container .admin .video-add .descibe {
-        margin-bottom: 16px; }
-        .main .container .admin .video-add .descibe span {
-          display: block;
-          margin-bottom: 6px; }
-      .main .container .admin .video-add .btn-course {
-        letter-spacing: 2px;
-        padding: auto 20px; }
+
+.admin .content {
+  position: relative;
+  min-height: 800px;
+  background: #D9E0E7;
+  margin-left: 240px;
+  border-left: 1px solid #cccccc;
+  padding: 40px 40px 20px 40px; }
+  .admin .content .course-list,
+  .admin .content .video-add {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 40px; }
+    .admin .content .course-list .dash-head,
+    .admin .content .video-add .dash-head {
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #2D353C;
+      margin: 0;
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      letter-spacing: 2px;
+      color: #fff;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px; }
 
 .admin .content .button-group {
   display: inline; }
@@ -9100,3 +9062,145 @@ footer {
     text-overflow: ellipsis; }
   .admin .content table tr .title {
     width: 80%; }
+
+.not-found-content {
+  background-color: #fff;
+  width: 100%;
+  padding-top: 100px;
+  height: 580px; }
+  .not-found-content .not-found {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+    .not-found-content .not-found img {
+      float: left;
+      margin-top: -20px; }
+    .not-found-content .not-found div {
+      display: inline-block; }
+      .not-found-content .not-found div h1 {
+        margin-top: 40px;
+        font-size: 120px;
+        letter-spacing: 8px;
+        font-weight: lighter; }
+      .not-found-content .not-found div p {
+        margin-bottom: 20px;
+        font-size: 16px; }
+      .not-found-content .not-found div .btn {
+        padding: 4px 20px;
+        letter-spacing: 2px; }
+
+.content {
+  position: relative;
+  min-height: 800px;
+  background: #D9E0E7;
+  margin-left: 240px;
+  border-left: 1px solid #cccccc;
+  padding: 40px 40px 20px 40px; }
+  .content .course-list,
+  .content .video-add {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 40px; }
+    .content .course-list h2.dash-head,
+    .content .video-add h2.dash-head {
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #2D353C;
+      margin: 0;
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      letter-spacing: 2px;
+      color: #fff;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px; }
+
+.video-add {
+  width: 360px;
+  padding-bottom: 20px; }
+  .video-add > .form-group,
+  .video-add .select,
+  .video-add .radio,
+  .video-add .descibe,
+  .video-add button {
+    margin-left: 30px;
+    margin-right: 30px; }
+    .video-add > .form-group > span,
+    .video-add .select > span,
+    .video-add .radio > span,
+    .video-add .descibe > span,
+    .video-add button > span {
+      font-weight: bold; }
+  .video-add .form-info label {
+    display: inline-block;
+    margin-right: 16px; }
+  .video-add .form-info input {
+    display: inline-block;
+    width: 65%; }
+  .video-add .select div {
+    margin-bottom: 16px; }
+    .video-add .select div span {
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 16px; }
+    .video-add .select div select.form-control {
+      display: inline-block;
+      width: 65%; }
+  .video-add .radio {
+    margin-bottom: 18px;
+    margin-top: 18px; }
+    .video-add .radio span {
+      display: inline-block;
+      margin-right: 16px; }
+    .video-add .radio label {
+      margin-right: 14px; }
+  .video-add .inputFile {
+    margin-bottom: 20px;
+    margin-top: 20px; }
+    .video-add .inputFile label, .video-add .inputFile input {
+      display: inline-block; }
+    .video-add .inputFile label {
+      margin-right: 16px; }
+    .video-add .inputFile input {
+      width: 65%; }
+    .video-add .inputFile .help-block {
+      margin-left: 80px;
+      font-size: 12px; }
+  .video-add .descibe {
+    margin-bottom: 16px; }
+    .video-add .descibe span {
+      display: block;
+      margin-bottom: 6px; }
+  .video-add .btn-course {
+    letter-spacing: 2px;
+    padding: auto 20px; }
+
+.content {
+  position: relative;
+  min-height: 800px;
+  background: #D9E0E7;
+  margin-left: 240px;
+  border-left: 1px solid #cccccc;
+  padding: 40px 40px 20px 40px; }
+  .content .course-list,
+  .content .video-add {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 40px; }
+    .content .course-list .dash-head,
+    .content .video-add .dash-head {
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #2D353C;
+      margin: 0;
+      margin-bottom: 20px;
+      padding: 12px 20px;
+      letter-spacing: 2px;
+      color: #fff;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px; }
+
+.course-list .table,
+.course-list .page {
+  padding-left: 20px;
+  padding-right: 20px; }

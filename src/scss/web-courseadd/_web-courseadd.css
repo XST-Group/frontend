@@ -1,5 +1,5 @@
 .video-add {
-  width: 480px;
+  width: 360px;
   padding-bottom: 20px; }
   .video-add > .form-group,
   .video-add .select,
@@ -19,7 +19,7 @@
     margin-right: 16px; }
   .video-add .form-info input {
     display: inline-block;
-    width: 80%; }
+    width: 65%; }
   .video-add .select div {
     margin-bottom: 16px; }
     .video-add .select div span {
@@ -28,7 +28,7 @@
       margin-right: 16px; }
     .video-add .select div select.form-control {
       display: inline-block;
-      width: 50%; }
+      width: 65%; }
   .video-add .radio {
     margin-bottom: 18px;
     margin-top: 18px; }
@@ -44,6 +44,8 @@
       display: inline-block; }
     .video-add .inputFile label {
       margin-right: 16px; }
+    .video-add .inputFile input {
+      width: 65%; }
     .video-add .inputFile .help-block {
       margin-left: 80px;
       font-size: 12px; }
