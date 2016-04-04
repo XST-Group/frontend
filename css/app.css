@@ -9023,20 +9023,20 @@ footer {
           border-top-right-radius: 6px;
           border-top-left-radius: 6px; }
 
-.admin .content {
+.admin .content-course {
   position: relative;
   min-height: 800px;
   background: #D9E0E7;
   margin-left: 240px;
   border-left: 1px solid #cccccc;
   padding: 40px 40px 20px 40px; }
-  .admin .content .course-list,
-  .admin .content .video-add {
+  .admin .content-course .course-list,
+  .admin .content-course .video-add {
     background-color: #fff;
     border-radius: 6px;
     margin-bottom: 40px; }
-    .admin .content .course-list .dash-head,
-    .admin .content .video-add .dash-head {
+    .admin .content-course .course-list .dash-head,
+    .admin .content-course .video-add .dash-head {
       font-size: 14px;
       font-weight: bold;
       background-color: #2D353C;
@@ -9089,31 +9089,6 @@ footer {
       .not-found-content .not-found div .btn {
         padding: 4px 20px;
         letter-spacing: 2px; }
-
-.content {
-  position: relative;
-  min-height: 800px;
-  background: #D9E0E7;
-  margin-left: 240px;
-  border-left: 1px solid #cccccc;
-  padding: 40px 40px 20px 40px; }
-  .content .course-list,
-  .content .video-add {
-    background-color: #fff;
-    border-radius: 6px;
-    margin-bottom: 40px; }
-    .content .course-list h2.dash-head,
-    .content .video-add h2.dash-head {
-      font-size: 14px;
-      font-weight: bold;
-      background-color: #2D353C;
-      margin: 0;
-      margin-bottom: 20px;
-      padding: 12px 20px;
-      letter-spacing: 2px;
-      color: #fff;
-      border-top-right-radius: 6px;
-      border-top-left-radius: 6px; }
 
 .video-add {
   width: 360px;
@@ -9174,31 +9149,6 @@ footer {
   .video-add .btn-course {
     letter-spacing: 2px;
     padding: auto 20px; }
-
-.content {
-  position: relative;
-  min-height: 800px;
-  background: #D9E0E7;
-  margin-left: 240px;
-  border-left: 1px solid #cccccc;
-  padding: 40px 40px 20px 40px; }
-  .content .course-list,
-  .content .video-add {
-    background-color: #fff;
-    border-radius: 6px;
-    margin-bottom: 40px; }
-    .content .course-list .dash-head,
-    .content .video-add .dash-head {
-      font-size: 14px;
-      font-weight: bold;
-      background-color: #2D353C;
-      margin: 0;
-      margin-bottom: 20px;
-      padding: 12px 20px;
-      letter-spacing: 2px;
-      color: #fff;
-      border-top-right-radius: 6px;
-      border-top-left-radius: 6px; }
 
 .course-list .table,
 .course-list .page {
