@@ -10,10 +10,14 @@
     }
     p {
       position: absolute;
-      top: 60%;
+      bottom: 15px;
       margin: 0 20px;
       font-size: 25px;
       font-weight: bold;
+      height: 80px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #fff;
     }
   }
 
@@ -25,10 +29,13 @@
       }
       p {
         position: absolute;
-        top: 60%;
         margin: 0 20px;
+        bottom: 15px;
         font-size: 14px;
         font-weight: bold;
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;        
       }
     }
   }
