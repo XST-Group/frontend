@@ -9471,3 +9471,93 @@ footer {
 
 .modal .modal-footer .outside-login .outside-list li a.icon-outside-qq:hover {
   background-position: -80px 0px; }
+
+.register-bg {
+  background-color: #EDEFF0; }
+
+#register .constr {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  #register .constr .regist-head {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+    background-color: #be3948;
+    color: #fff;
+    font-size: 20px; }
+  #register .constr .regist-body {
+    min-height: 400px;
+    padding: 100px 0;
+    background-color: #fff; }
+    #register .constr .regist-body .regist-main {
+      width: 850px;
+      margin-left: auto;
+      margin-right: auto; }
+      #register .constr .regist-body .regist-main .form-group .regist-star {
+        margin-right: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: simsun;
+        color: #f30; }
+      #register .constr .regist-body .regist-main .form-group .tip {
+        background: url(http://img.mukewang.com/5453084a00016ae300120012.gif) no-repeat left;
+        color: #be3948;
+        line-height: 30px; }
+      #register .constr .regist-body .regist-main .form-group .regist-btn {
+        display: inline-block;
+        width: 160px;
+        line-height: 40px;
+        background-color: #39b94e;
+        color: #fff;
+        text-align: center;
+        text-decoration: none; }
+        #register .constr .regist-body .regist-main .form-group .regist-btn:hover {
+          background-color: #33a646; }
+
+#admin_login {
+  height: 700px;
+  background-image: url("http://d.3987.com/jydwsy_150709/desk_003.jpg");
+  background-repeat: repeat;
+  background-size: cover; }
+  #admin_login .login_box {
+    margin-top: 100px;
+    background-color: white;
+    width: 45%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 15px #888888;
+    border-radius: 5px; }
+    #admin_login .login_box .modal-header {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      font-size: 30px;
+      height: 80px;
+      text-align: center;
+      background-color: #3498DB;
+      color: white; }
+      #admin_login .login_box .modal-header h2 {
+        line-height: 10px; }
+    #admin_login .login_box .modal-body {
+      margin: 30px 0; }
+      #admin_login .login_box .modal-body .form {
+        margin-top: 10px; }
+        #admin_login .login_box .modal-body .form .input-group {
+          margin: 30px;
+          margin-left: auto;
+          margin-right: auto; }
+          #admin_login .login_box .modal-body .form .input-group .btn {
+            float: left;
+            background-color: #0099cc;
+            color: white;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            font-size: 14px; }
+            #admin_login .login_box .modal-body .form .input-group .btn:hover {
+              background-color: #0099cc; }
+          #admin_login .login_box .modal-body .form .input-group .forget {
+            float: right;
+            line-height: 45px; }

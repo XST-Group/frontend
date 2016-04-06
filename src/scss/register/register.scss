@@ -1,0 +1,17 @@
+.register-bg{
+  background-color: #EDEFF0;
+}
+#register{
+
+  .constr {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @import "register-head.scss";
+    @import "register-body.scss";	
+
+    
+    
+  }
+}
