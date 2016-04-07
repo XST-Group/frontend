@@ -1,0 +1,43 @@
+.register-bg {
+  background-color: #EDEFF0; }
+
+#register .constr {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  #register .constr .regist-head {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+    background-color: #be3948;
+    color: #fff;
+    font-size: 20px; }
+  #register .constr .regist-body {
+    min-height: 400px;
+    padding: 100px 0;
+    background-color: #fff; }
+    #register .constr .regist-body .regist-main {
+      width: 850px;
+      margin-left: auto;
+      margin-right: auto; }
+      #register .constr .regist-body .regist-main .form-group .regist-star {
+        margin-right: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: simsun;
+        color: #f30; }
+      #register .constr .regist-body .regist-main .form-group .tip {
+        background: url(http://img.mukewang.com/5453084a00016ae300120012.gif) no-repeat left;
+        color: #be3948;
+        line-height: 30px; }
+      #register .constr .regist-body .regist-main .form-group .regist-btn {
+        display: inline-block;
+        width: 160px;
+        line-height: 40px;
+        background-color: #39b94e;
+        color: #fff;
+        text-align: center;
+        text-decoration: none; }
+        #register .constr .regist-body .regist-main .form-group .regist-btn:hover {
+          background-color: #33a646; }
