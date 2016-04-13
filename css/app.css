@@ -7972,25 +7972,51 @@ header {
   background-color: #fff;
   box-shadow: 1.5px 2.6px 9px 0 rgba(0, 0, 0, 0.05);
   position: relative; }
-  header .navbar-brand {
-    height: 70px;
-    padding: 20px 10px; }
-    header .navbar-brand img {
-      height: 100%;
-      width: auto; }
+  header .navbar-header {
+    display: inline-block;
+    width: 12%; }
+    header .navbar-header .navbar-brand {
+      box-sizing: border-box;
+      padding-top: 14px;
+      height: 50px; }
+      header .navbar-header .navbar-brand img {
+        height: 100%;
+        width: auto; }
 
 .topmenu.navbar-nav li a {
-  padding: 25px 20px;
+  padding: 14px 20px;
   font-size: 16px; }
   .topmenu.navbar-nav li a:hover {
     background-color: #fff; }
 
+.header-search {
+  letter-spacing: 0;
+  margin-top: 10px;
+  margin-right: 30px;
+  border: 1px solid #ACADAE;
+  border-radius: 25px;
+  padding: 4px 10px 4px 16px;
+  background-color: inherit; }
+  .header-search input {
+    border: none;
+    background-color: inherit;
+    width: 220px; }
+  .header-search button {
+    border: none;
+    background-color: inherit; }
+    .header-search button:hover {
+      opacity: .5;
+      filter: alpha(opacity=50); }
+  .header-search:hover {
+    box-shadow: 0 0 4px #ACADAE; }
+
 .user-nav .nav li {
-  height: 70px;
-  line-height: 70px;
+  height: 50px;
+  line-height: 50px;
   float: left;
   vertical-align: middle; }
   .user-nav .nav li a {
+    display: inline-block;
     padding: 0 10px;
     font-size: 16px;
     color: #15c288; }
@@ -8127,24 +8153,90 @@ footer {
   background: #fff;
   max-height: 600px; }
 
-.index-section h2 {
-  font-size: 24px;
-  position: relative;
-  text-align: center;
-  margin: 60px auto 35px; }
-  .index-section h2 span {
-    padding: 0 20px;
-    background: #fff;
-    position: relative;
-    z-index: 1; }
-  .index-section h2:after {
-    content: '';
-    position: absolute;
-    background: #efefef;
-    height: 1px;
-    left: 0;
-    right: 0;
-    top: 13px; }
+.index-section {
+  margin-bottom: 20px; }
+  .index-section .container {
+    width: 100%;
+    text-align: center;
+    position: relative; }
+    .index-section .container .button-course {
+      display: inline-block;
+      position: absolute;
+      width: 4%;
+      top: 238px;
+      background-color: #fff; }
+    .index-section .container .button-left {
+      left: 3px; }
+      .index-section .container .button-left button {
+        border: none;
+        opacity: .5;
+        filter: alpha(opacity=50);
+        padding: 26px 8px;
+        background-color: #fff; }
+        .index-section .container .button-left button i {
+          font-size: 36px;
+          color: #36AF6D; }
+        .index-section .container .button-left button:hover {
+          opacity: .9;
+          filter: alpha(opacity=90); }
+    .index-section .container .button-right {
+      right: 3px; }
+      .index-section .container .button-right button {
+        border: none;
+        opacity: .5;
+        filter: alpha(opacity=50);
+        padding: 26px 8px;
+        background-color: #fff; }
+        .index-section .container .button-right button i {
+          font-size: 36px;
+          color: #36AF6D; }
+        .index-section .container .button-right button:hover {
+          opacity: .9;
+          filter: alpha(opacity=90); }
+    .index-section .container .head-course {
+      text-align: left;
+      margin-top: 40px;
+      margin-bottom: 25px;
+      margin-left: 3%;
+      margin-right: 4%; }
+      .index-section .container .head-course .nav {
+        margin-top: 28px; }
+        .index-section .container .head-course .nav li {
+          display: inline-block;
+          padding: 0;
+          padding-right: 8px;
+          padding-left: 6px;
+          border-right: 1px dashed #8b8b8b; }
+          .index-section .container .head-course .nav li a {
+            padding: 2px 16px;
+            border-radius: 4px; }
+            .index-section .container .head-course .nav li a:hover {
+              background-color: #36AF6D;
+              color: #fff;
+              border-radius: 4px; }
+          .index-section .container .head-course .nav li a.active {
+            background-color: #36AF6D;
+            color: #fff; }
+        .index-section .container .head-course .nav li:last-child {
+          border-right: none; }
+      .index-section .container .head-course h2 {
+        display: inline-block;
+        font-size: 22px;
+        position: relative; }
+        .index-section .container .head-course h2 span {
+          padding: 0 20px;
+          background-color: #fff;
+          letter-spacing: 1px;
+          position: relative;
+          z-index: 1; }
+        .index-section .container .head-course h2:after {
+          content: '';
+          position: absolute;
+          background: #efefef;
+          height: 1px;
+          left: 0;
+          right: 0;
+          top: 13px; }
 
 .index-about {
   margin-top: 30px;
@@ -8219,43 +8311,60 @@ footer {
     color: #15c288;
     background-color: #fff !important; }
 
-.course .course-item {
-  position: relative;
-  border: 1px solid #ddd;
-  margin-bottom: 15px; }
-  .course .course-item .course-thumb {
-    position: relative;
-    overflow: hidden;
-    max-height: 180px; }
-    .course .course-item .course-thumb img {
-      width: 100%;
-      height: auto; }
-  .course .course-item .course-info {
-    padding: 10px; }
-    .course .course-item .course-info .title {
-      font-size: 14px;
-      color: #444;
-      margin-bottom: 5px;
-      font-weight: bold;
-      height: 40px;
-      text-overflow: ellipsis;
-      word-break: break-all;
-      overflow: hidden; }
-    .course .course-item .course-info .desc {
-      font-size: 12px;
-      height: 34px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical; }
-    .course .course-item .course-info .addon {
-      padding-top: 5px;
-      font-size: 13px; }
-      .course .course-item .course-info .addon .free {
-        color: #15c288; }
-      .course .course-item .course-info .addon .author {
-        color: #999; }
+.course {
+  width: 92%;
+  display: inline-block;
+  text-align: center; }
+  .course .row {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 10px; }
+    .course .row .course-item {
+      text-align: left;
+      position: relative;
+      box-shadow: 0 0 2px #8B8B8B;
+      margin-bottom: 15px; }
+      .course .row .course-item:hover {
+        box-shadow: 0 0 10px #36AF6D;
+        opacity: .9; }
+      .course .row .course-item .course-thumb {
+        position: relative;
+        overflow: hidden;
+        max-height: 180px; }
+        .course .row .course-item .course-thumb img {
+          width: 100%;
+          height: auto; }
+      .course .row .course-item .course-info {
+        padding: 10px;
+        position: absolute;
+        bottom: 0; }
+        .course .row .course-item .course-info .title {
+          font-size: 14px;
+          font-weight: bold;
+          color: #fff;
+          margin-bottom: 5px;
+          font-weight: bold;
+          height: 20px;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          overflow: hidden; }
+          .course .row .course-item .course-info .title a {
+            color: #28282F; }
+        .course .row .course-item .course-info .desc {
+          font-size: 12px;
+          height: 34px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        .course .row .course-item .course-info .addon {
+          padding-top: 0;
+          font-size: 13px; }
+          .course .row .course-item .course-info .addon .free {
+            color: #464646; }
+          .course .row .course-item .course-info .addon .author {
+            color: #464646; }
 
 .video-wrapper {
   background-color: black;
@@ -8337,28 +8446,59 @@ footer {
     float: left;
     display: inline-block; }
 
-.group-item {
+.index-group.index-section .container .button-course {
+  top: 288px; }
+
+.group {
   overflow: hidden;
-  border: 1px solid #eee; }
-  .group-item .group-thumb img {
-    width: 100%; }
-  .group-item .group-info {
-    padding: 0 14px; }
-    .group-item .group-info .title {
-      font-size: 14px;
-      color: #444;
-      margin: 13px 0; }
-    .group-item .group-info .desc {
-      color: #666;
-      font-size: 12px;
-      height: 34px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin: 0 0 10px; }
-    .group-item .group-info a {
-      width: 100%;
-      display: block;
-      margin-bottom: 10px; }
+  width: 92%;
+  display: inline-block;
+  text-align: center; }
+  .group .row {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 10px; }
+    .group .row .group-item {
+      text-align: left;
+      position: relative;
+      box-shadow: 0 0 2px #8B8B8B;
+      margin-bottom: 15px; }
+      .group .row .group-item:hover {
+        box-shadow: 0 0 10px #36AF6D;
+        opacity: .9;
+        filter: alpha(opacity=90); }
+      .group .row .group-item .group-thumb {
+        position: relative;
+        overflow: hidden; }
+        .group .row .group-item .group-thumb img {
+          width: 100%;
+          height: auto;
+          min-height: 180px; }
+      .group .row .group-item .group-info {
+        padding: 0; }
+        .group .row .group-item .group-info .title {
+          display: block;
+          font-size: 14px;
+          font-weight: bold;
+          color: #fff;
+          margin: 4px 10px;
+          position: absolute;
+          bottom: 10px; }
+        .group .row .group-item .group-info .desc {
+          color: #666;
+          font-size: 12px;
+          height: 34px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0 0 10px; }
+        .group .row .group-item .group-info a {
+          width: 26%;
+          display: block;
+          padding: 2px 0;
+          margin-top: 10px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px; }
 
 #beike-nav {
   background-color: #27292C;

@@ -3,29 +3,58 @@ header {
 	background-color: $topmenu-background-color;
 	box-shadow: 1.5px 2.6px 9px 0 rgba(0,0,0,0.05);
 	position: relative;
-
-	.navbar-brand {
-		height: $topmenu-height;
-		padding: ($topmenu-height - $topmenu-brand-height) 10px;
-		img {
-			height: 100%;
-			width: auto;
+	.navbar-header {
+		display: inline-block;
+		width: 12%;
+		.navbar-brand {
+			box-sizing: border-box;
+			padding-top: 14px;
+			height: $topmenu-height;
+			img {
+				height: 100%;
+				width: auto;
+			}
 		}
 	}
+
 }
 
 .topmenu {
 	&.navbar-nav {
 		li {
 			a {
-				padding: 25px 20px;
+				padding: 14px 20px;
 				font-size: $topmenu-fontsize;
 				&:hover{
 					background-color: #fff;
 				}
 			}
-
 		}
+	}
+}
+.header-search {
+	letter-spacing: 0;
+	margin-top: 10px;
+	margin-right: 30px;
+	border: 1px solid #ACADAE;
+	border-radius: 25px;
+	padding: 4px 10px 4px 16px;
+	background-color: inherit;
+	input {
+		border: none;
+		background-color: inherit;
+		width: 220px;
+	}
+	button {
+		border: none;
+		background-color: inherit;
+		&:hover {
+			opacity:.5;
+			filter:alpha(opacity=50);
+		}
+	}
+	&:hover {
+		box-shadow: 0 0 4px #ACADAE;
 	}
 }
 .user-nav {
@@ -36,6 +65,7 @@ header {
 			float: left;
 			vertical-align: middle;
 			a {
+				display: inline-block;
 				padding: 0 10px;
 				font-size: $topmenu-fontsize;
 				color: $link-hover-color;
@@ -46,4 +76,3 @@ header {
 		}
 	}
 }
-
