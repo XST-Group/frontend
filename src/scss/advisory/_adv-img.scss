@@ -1,43 +1,86 @@
+@charset "utf-8";
 #adv-img {
   img {
     width: 100%;
   }
+  .no-gap{
+    padding: 0px;
+  }
 
   .img-left {
-    padding-top: 10px;
-    img{
-      height: 302px;
-    }
-    p {
+    height: 300px;
+    .img-listButton {
       position: absolute;
-      bottom: 15px;
-      margin: 0 20px;
-      font-size: 25px;
-      font-weight: bold;
-      height: 80px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: #fff;
+      bottom: 10px;
+      right: 0px;
+      z-index: 20;
+      margin-bottom: 0px;
+      text-align: right;
+      width: 70%;
+      li {
+        padding: 6px;
+        text-indent: 0px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .active {
+        @extend li;
+        background-color: #e74c3c;
+      }
+    }
+
+    .img-block {
+      //水印文字
+      //padding-top: 10px;
+      img {
+        height: 300px;
+      }
+      p {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 0px;
+        margin-bottom: 0px;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white; //文字颜色一定不能动
+      }
+
     }
   }
 
   .img-right {
-    .img-right-small {
-      padding: 10px;
-      img{
-        height: 140px;
-      }
-      p {
-        position: absolute;
-        margin: 0 20px;
-        color:#fff;
-        bottom: 15px;
-        font-size: 14px;
+    height: 300px;
+    border: 1px solid #eee;
+    //background-color:rgb(240,240,240);
+    background-image: url("http://img1.tuniucdn.com/img/201501041115/home/index_bg.png");
+    ul {
+      .title {
+        padding: 10px  20px;
         font-weight: bold;
-        height: 40px;
-        overflow: hidden;
-        text-overflow: ellipsis;        
+        //background-color: #2ecc71;
+        background-color: rgba(46,204,113,0.8);
+        color: white;
+        font-size: 19px;
+      }
+      li {
+        padding: 10px 30px;
+        line-height: 20px;
+        cursor: pointer;
+        &:hover {
+          transition-duration: 0.5s;
+          background-color: rgba(240, 240, 240,0.5);
+          border-left: 7px solid #2ecc71;
+        }
       }
     }
   }
+
 }
+
+
