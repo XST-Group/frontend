@@ -1,3 +1,10 @@
 .group.list {
 	margin-bottom: 20px;
 }
+
+.group {
+	.group-thumb {
+		max-height: 150px;
+		overflow: hidden;
+	}	
+}
