@@ -48,6 +48,7 @@
         height: 50px;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
         color: white; //文字颜色一定不能动
       }
 
