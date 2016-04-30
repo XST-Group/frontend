@@ -1,4 +1,31 @@
 #adv-article {
+  .nav {
+    margin-top: 28px;
+    li {
+      display:inline-block;
+      padding: 0;
+      padding-right: 8px;
+      padding-left: 6px;
+      border-right: 1px dashed #8b8b8b;
+      a {
+        padding: 2px 16px;
+        border-radius: 4px;
+        &:hover {
+          background-color: $primaryColor;
+          color: #fff;
+          border-radius: 4px;
+        }
+      }
+      a.active {
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+    li:last-child {
+      border-right: none;
+    }
+  }
+
   .floor {
     margin-top: 20px;
     padding: 20px 10px;
