@@ -8760,6 +8760,27 @@ footer {
     .subject li a, .subject #adv-img .img-left .img-listButton .active a, #adv-img .img-left .img-listButton .subject .active a {
       padding: 4px 10px; }
 
+#adv-article .nav {
+  margin-top: 28px; }
+  #adv-article .nav li, #adv-article .nav #adv-img .img-left .img-listButton .active, #adv-img .img-left .img-listButton #adv-article .nav .active {
+    display: inline-block;
+    padding: 0;
+    padding-right: 8px;
+    padding-left: 6px;
+    border-right: 1px dashed #8b8b8b; }
+    #adv-article .nav li a, #adv-article .nav #adv-img .img-left .img-listButton .active a, #adv-img .img-left .img-listButton #adv-article .nav .active a {
+      padding: 2px 16px;
+      border-radius: 4px; }
+      #adv-article .nav li a:hover, #adv-article .nav #adv-img .img-left .img-listButton .active a:hover, #adv-img .img-left .img-listButton #adv-article .nav .active a:hover {
+        background-color: #36AF6D;
+        color: #fff;
+        border-radius: 4px; }
+    #adv-article .nav li a.active, #adv-article .nav #adv-img .img-left .img-listButton .active a.active, #adv-img .img-left .img-listButton #adv-article .nav .active a.active {
+      background-color: #36AF6D;
+      color: #fff; }
+  #adv-article .nav li:last-child, #adv-article .nav #adv-img .img-left .img-listButton .active:last-child, #adv-img .img-left .img-listButton #adv-article .nav .active:last-child {
+    border-right: none; }
+
 #adv-article .floor {
   margin-top: 20px;
   padding: 20px 10px;
