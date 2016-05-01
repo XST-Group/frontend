@@ -1,95 +1,105 @@
-.video-add {
-  width: 98%;
-  min-width: 720px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  > .form-group,
-  .select,
-  .radio,
-  .descibe,
-  button {
-    margin-left: 30px;
-    margin-right: 30px;
-    > span {
-      font-weight: bold;
-    }
+.content-course {
+  .dash-head {
+    font-size: 24px;
+    width: 98%;
+    padding-left:10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
-  .form-info {
-    margin-top: 30px;
-    label {
-      display: inline-block;
-      margin-right: 16px;
-      margin-bottom: 16px;
-    }
-    input {
-      display: inline-block;
-      width: 65%;
-    }
-  }
-  .select {
-    margin-left: 30px;
-    margin-right: 30px;
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-    div {
-      margin-bottom: 16px;
-      display: inline-block;
-      width: 30%;
-      text-align: left;
-      span {
+  .video-add {
+    width: 98%;
+    min-width: 720px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    > .form-group,
+    .select,
+    .radio,
+    .descibe,
+    button {
+      margin-left: 30px;
+      margin-right: 30px;
+      > span {
         font-weight: bold;
+      }
+    }
+    .form-info {
+      margin-top: 30px;
+      label {
+        display: inline-block;
+        margin-right: 16px;
+        margin-bottom: 16px;
+      }
+      input {
+        display: inline-block;
+        width: 65%;
+      }
+    }
+    .select {
+      margin-left: 30px;
+      margin-right: 30px;
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content:space-between;
+      div {
+        margin-bottom: 16px;
+        display: inline-block;
+        width: 30%;
+        text-align: left;
+        span {
+          font-weight: bold;
+          display: inline-block;
+          margin-right: 16px;
+        }
+        select.form-control {
+          display: inline-block;
+          width: 60%;
+          min-width: 80px;
+          padding-right: 2px;
+        }
+      }
+
+    }
+    .radio {
+      margin-bottom: 18px;
+      margin-top: 18px;
+      span {
         display: inline-block;
         margin-right: 16px;
       }
-      select.form-control {
-        display: inline-block;
-        width: 60%;
-        min-width: 80px;
-        padding-right: 2px;
+      label {
+        margin-right: 14px;
       }
     }
-
-  }
-  .radio {
-    margin-bottom: 18px;
-    margin-top: 18px;
-    span {
-      display: inline-block;
-      margin-right: 16px;
+    .inputFile {
+      margin-bottom: 26px;
+      margin-top: 8px;
+      label,input {
+        display: inline-block;
+      }
+      label {
+        margin-right: 16px;
+      }
+      input {
+        width: 65%;
+      }
+      .help-block {
+        margin-left: 80px;
+        font-size: 12px;
+      }
     }
-    label {
-      margin-right: 14px;
+    .descibe {
+      margin-bottom: 16px;
+      span {
+        display: block;
+        margin-bottom: 6px;
+      }
     }
-  }
-  .inputFile {
-    margin-bottom: 26px;
-    margin-top: 8px;
-    label,input {
-      display: inline-block;
+    .btn-course {
+      letter-spacing: 2px;
+      padding: 6px 40px;
     }
-    label {
-      margin-right: 16px;
-    }
-    input {
-      width: 65%;
-    }
-    .help-block {
-      margin-left: 80px;
-      font-size: 12px;
-    }
-  }
-  .descibe {
-    margin-bottom: 16px;
-    span {
-      display: block;
-      margin-bottom: 6px;
-    }
-  }
-  .btn-course {
-    letter-spacing: 2px;
-    padding: 6px 40px;
   }
 }
 
