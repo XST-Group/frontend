@@ -1,0 +1,66 @@
+@charset "utf-8";
+.admin{
+  .content-course {
+    position: relative;
+    min-height: 800px;
+    background: #D9E0E7;
+    margin-left: 240px;
+    border-left: 1px solid #cccccc;
+    padding: 40px 40px 20px 40px;
+    .course-list,
+    .video-add {
+      background-color: #fff;
+      border-radius: 6px;
+      margin-bottom: 40px;
+      .dash-head {
+        font-size: 14px;
+        font-weight: bold;
+        background-color: #2D353C;
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 12px 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+      }
+    }
+  }
+
+
+  .content{
+
+    .advisory-manage-content{
+      min-width: 1000px;
+      padding: 20px;
+      border-radius: 6px;
+      background-color: white;
+      .button-group{
+        display:inline;
+        .input-group{
+          width: 200px;
+          display: inline-table;
+        }
+      }
+
+      table{
+        table-layout:fixed;
+        //width: 100;
+        tr{
+          .text{
+            overflow: hidden;
+            white-space: nowrap;    //文本不换行
+            text-overflow: ellipsis;
+            //word-break:keep-all;
+          }
+          .title{
+            @extend .text;
+            width: 80%;
+          }
+
+        }
+      }
+    }
+
+  }
+}

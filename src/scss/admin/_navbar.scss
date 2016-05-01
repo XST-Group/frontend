@@ -1,52 +1,52 @@
-      .navbar {
-        background: #4d5b76;
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6f80a1));
-        background: -ms-linear-gradient(bottom, #4d5b76, #6f80a1);
-        background: -moz-linear-gradient(center bottom, #4d5b76 0%, #6f80a1 100%);
-        background: -o-linear-gradient(bottom, #4d5b76, #6f80a1);
-        filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f80a1',EndColorStr='#4d5b76')";
-        box-shadow: 0px 0px 3px #cccccc;
-        padding: 0em 1em;
-        margin: 0px;
-        background-clip: padding-box;
-        .navbar-brand{
-          color: #fff;
-        }
+.navbar {
+  background: #4d5b76;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #4d5b76), color-stop(1, #6f80a1));
+  background: -ms-linear-gradient(bottom, #4d5b76, #6f80a1);
+  background: -moz-linear-gradient(center bottom, #4d5b76 0%, #6f80a1 100%);
+  background: -o-linear-gradient(bottom, #4d5b76, #6f80a1);
+  filter: progid:dximagetransform.microsoft.gradient(startColorStr='#e3e3e3', EndColorStr='#ffffff');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#6f80a1',EndColorStr='#4d5b76')";
+  box-shadow: 0px 0px 3px #cccccc;
+  padding: 0em 1em;
+  margin: 0px;
+  background-clip: padding-box;
+  .navbar-brand{
+    color: #fff;
+  }
 
-        .navbar-user{
-          .dropdown-toggle{
-            &:hover{
-              background-color: lighten(#444,7);
-            }
-          }
-        }
-
-        .nav {
-          > li{         //只到第一层！！！
-            > a {
-              color: #fff;
-              text-shadow: none;
-            }
-            &:hover {
-              background-color: #444;
-            }
-            > a:hover {
-              color: #fff;
-            }
-          }
-        }
-        .dropdown-menu {
-          left: 0;
-          a{
-            &:hover{
-              background: none;
-              color: #000;
-            }
-          }
-        }
-        .nav li.dropdown.open > .dropdown-toggle {
-          background-color: #444;
-          color: #fff;
-        }
+  .navbar-user{
+    .dropdown-toggle{
+      &:hover{
+        background-color: lighten(#444,7);
       }
+    }
+  }
+
+  .nav {
+    > li{         //鍙埌绗竴灞傦紒锛侊紒
+      > a {
+        color: #fff;
+        text-shadow: none;
+      }
+      &:hover {
+        background-color: #444;
+      }
+      > a:hover {
+        color: #fff;
+      }
+    }
+  }
+  .dropdown-menu {
+    left: 0;
+    a{
+      &:hover{
+        background: none;
+        color: #000;
+      }
+    }
+  }
+  .nav li.dropdown.open > .dropdown-toggle {
+    background-color: #444;
+    color: #fff;
+  }
+}
