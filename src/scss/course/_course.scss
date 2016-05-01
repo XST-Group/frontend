@@ -1,5 +1,117 @@
+@charset "utf-8";
+$green:#2ecc71;
+$deep_green:#2ECC71;
+$blue:#3498DB;
+$deep_blue:#2890B9;
+$red:#e74c3c;
+$deep_red:#c0392b;
+$grey1:#ecf0f1;
+$grey2:#bdc3c7;
+$grey3:#95a5a6;
+$grey4:#7f8c8d;
+$grey5:#34495e;
+$grey6:#2c3e50;
+$bgcolor:rgb(240,240,240);
+$contain:rgb(249,249,249);
+$border_color:rgb(219,219,219);
+$orange:#f88f55;
+
+$font-color:#bbb;
+
+.select-menu{
+  color: white;
+  .select {
+    background-color: white;
+    padding: 5px 10px;
+    border: #ddd 1px solid;
+    border-radius: 4px;
+    font-size: 12px;
+
+    li {            //处于同级
+      list-style: none;
+      padding: 10px 0 5px 100px;
+    }
+
+    .select-list {
+      border-bottom: #eee 1px dashed;
+    }
+
+    dl {
+      zoom: 1;
+      position: relative;
+      margin-bottom: 10px;
+      //line-height: 24px;
+      &:after {
+        content: " ";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+      }
+
+      dt {      //小标题
+        width: 100px;
+        margin-bottom: 5px;
+        position: absolute;
+        top: 0;
+        left: -100px;
+        text-align: right;
+        color: #666;
+        height: 24px;
+        line-height: 24px;
+      }
+      dd {
+        line-height: 24px;
+        float: left;
+        display: inline;
+        margin: 0 0 5px 5px;
+        a {
+          display: inline-block;
+          white-space: nowrap;
+          height: 24px;
+          padding: 0 10px;
+          text-decoration: none;
+          border-radius: 2px;
+          &:hover {
+            color: white;
+            background-color: $green;
+          }
+        }
+      }
+    }
+
+    .selected a {           //被选中的a标签
+      color: #fff;
+      background-color: $deep_green;
+      cursor: default;
+    }
+
+  }
+
+  .select-result{
+    dt{
+      font-weight: bold;
+    }
+
+    .select-no {
+      color: #999;
+    }
+  }           //为最后一行
+
+  //.select .select-result a {
+  //  padding-right: 20px;
+  //  background: $green url("../images/close.gif") right 9px no-repeat;
+  //  &:hover {
+  //    background-position: right -15px;
+  //  }
+  //}
+
+
+
+}
+
 .course {
-  width: 92%;
+  width: 100%;
   display: inline-block;
   text-align: center;
   .row {

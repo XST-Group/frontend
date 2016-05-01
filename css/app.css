@@ -8377,8 +8377,65 @@ footer {
     color: #15c288;
     background-color: #fff !important; }
 
+.select-menu {
+  color: white; }
+  .select-menu .select {
+    background-color: white;
+    padding: 5px 10px;
+    border: #ddd 1px solid;
+    border-radius: 4px;
+    font-size: 12px; }
+    .select-menu .select li, .select-menu .select #adv-img .img-left .img-listButton .active, #adv-img .img-left .img-listButton .select-menu .select .active {
+      list-style: none;
+      padding: 10px 0 5px 100px; }
+    .select-menu .select .select-list {
+      border-bottom: #eee 1px dashed; }
+    .select-menu .select dl {
+      zoom: 1;
+      position: relative;
+      margin-bottom: 10px; }
+      .select-menu .select dl:after {
+        content: " ";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden; }
+      .select-menu .select dl dt {
+        width: 100px;
+        margin-bottom: 5px;
+        position: absolute;
+        top: 0;
+        left: -100px;
+        text-align: right;
+        color: #666;
+        height: 24px;
+        line-height: 24px; }
+      .select-menu .select dl dd {
+        line-height: 24px;
+        float: left;
+        display: inline;
+        margin: 0 0 5px 5px; }
+        .select-menu .select dl dd a {
+          display: inline-block;
+          white-space: nowrap;
+          height: 24px;
+          padding: 0 10px;
+          text-decoration: none;
+          border-radius: 2px; }
+          .select-menu .select dl dd a:hover {
+            color: white;
+            background-color: #2ecc71; }
+    .select-menu .select .selected a {
+      color: #fff;
+      background-color: #2ECC71;
+      cursor: default; }
+  .select-menu .select-result dt {
+    font-weight: bold; }
+  .select-menu .select-result .select-no {
+    color: #999; }
+
 .course {
-  width: 92%;
+  width: 100%;
   display: inline-block;
   text-align: center; }
   .course .row {
@@ -8685,11 +8742,11 @@ footer {
   margin: 0 20px; }
 
 .submenu {
-  border-bottom: 1px solid #cccccc; }
+  border-bottom: 1px solid white; }
   .submenu ul {
     margin: 0px;
     display: block;
-    border: 1px solid #cccccc;
+    border: 1px solid white;
     border-bottom: none;
     padding: 10px 15px;
     font-size: 13px; }
