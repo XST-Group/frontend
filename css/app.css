@@ -9821,3 +9821,24 @@ footer {
           #admin_login .login_box .modal-body .form .input-group .forget {
             float: right;
             line-height: 45px; }
+
+.content .container-fluid .row {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px; }
+  .content .container-fluid .row div {
+    background-color: #fff;
+    border-radius: 6px; }
+    .content .container-fluid .row div .table thead tr th:last-child {
+      text-align: left; }
+    .content .container-fluid .row div .table tbody tr td:last-child {
+      text-align: left; }
+      .content .container-fluid .row div .table tbody tr td:last-child .btn-primary {
+        display: inline-block;
+        margin-right: 10px;
+        color: red; }
+
+.dash-table {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px 20px; }
