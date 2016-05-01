@@ -1,16 +1,16 @@
 var gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),       
-    sass = require('gulp-sass'),     
-    minifycss = require('gulp-minify-css'),   
-    uglify  = require('gulp-uglify'),        
-    rename = require('gulp-rename'),          
-    concat  = require('gulp-concat'),         
-    clean = require('gulp-clean'),           
-    tinylr = require('tiny-lr'),               
+    imagemin = require('gulp-imagemin'),
+    sass = require('gulp-sass'),
+    cleancss = require('gulp-clean-css'),
+    uglify  = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    concat  = require('gulp-concat'),
+    clean = require('gulp-clean'),
+    tinylr = require('tiny-lr'),
     server = tinylr(),
     browserSync = require('browser-sync'),
     port = 35729,
-    livereload = require('gulp-livereload');   
+    livereload = require('gulp-livereload');
 
 gulp.task('html', function() {
     gulp.src('./src/*.html')
@@ -23,8 +23,9 @@ gulp.task('css', function () {
     	.pipe(sass.sync().on('error', sass.logError))
     	.pipe(gulp.dest('./css'))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(minifycss())
+        .pipe(cleancss())
         .pipe(livereload(server))
+        .pipe(gulp.dest('./css'))
         .pipe(gulp.dest('./dist/css'));
 });
 

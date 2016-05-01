@@ -4,7 +4,9 @@
   "description": "校视通前端部分",
   "author": "XST Group",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-clean-css": "^2.0.6"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
