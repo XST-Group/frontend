@@ -9443,7 +9443,8 @@ footer {
   .admin .content-course .video-add {
     background-color: #fff;
     border-radius: 6px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    min-width: 720px; }
     .admin .content-course .course-list .dash-head,
     .admin .content-course .video-add .dash-head {
       font-size: 14px;
@@ -9500,13 +9501,11 @@ footer {
 
 .content-course .dash-head {
   font-size: 24px;
-  width: 98%;
   padding-left: 10px;
   margin-top: -20px;
   margin-bottom: 20px; }
 
 .content-course .video-add {
-  width: 98%;
   min-width: 720px;
   margin: 0 auto;
   padding-top: 10px;
@@ -9610,11 +9609,6 @@ footer {
       height: 10px;
       margin-bottom: 30px;
       background-color: #ccc; }
-
-.course-list .table,
-.course-list .page {
-  padding-left: 20px;
-  padding-right: 20px; }
 
 .modal {
   position: fixed;
@@ -9878,3 +9872,23 @@ footer {
           #admin_login .login_box .modal-body .form .input-group .forget {
             float: right;
             line-height: 45px; }
+
+.content .container-fluid .row {
+  background-color: #fff;
+  padding: 20px 20px;
+  border-radius: 6px; }
+  .content .container-fluid .row div {
+    background-color: #fff; }
+    .content .container-fluid .row div .table thead tr th:last-child {
+      text-align: left; }
+    .content .container-fluid .row div .table tbody tr td:last-child {
+      text-align: left; }
+      .content .container-fluid .row div .table tbody tr td:last-child .btn-primary {
+        display: inline-block;
+        margin-right: 10px;
+        color: red; }
+
+.dash-table {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 10px 20px; }
