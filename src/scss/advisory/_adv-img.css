@@ -1,0 +1,55 @@
+#adv-img img {
+  width: 100%; }
+#adv-img .no-gap {
+  padding: 0px; }
+#adv-img .img-left {
+  height: 300px; }
+  #adv-img .img-left .img-listButton {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    z-index: 20;
+    margin-bottom: 0px;
+    text-align: right;
+    width: 70%; }
+    #adv-img .img-left .img-listButton li, #adv-img .img-left .img-listButton .active {
+      padding: 6px;
+      text-indent: 0px; }
+      #adv-img .img-left .img-listButton li:hover, #adv-img .img-left .img-listButton .active:hover {
+        cursor: pointer; }
+    #adv-img .img-left .img-listButton .active {
+      background-color: #e74c3c; }
+  #adv-img .img-left .img-block img {
+    height: 300px; }
+  #adv-img .img-left .img-block p {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white; }
+#adv-img .img-right {
+  height: 300px;
+  border: 1px solid #eee;
+  background-image: url("http://img1.tuniucdn.com/img/201501041115/home/index_bg.png"); }
+  #adv-img .img-right ul .title {
+    padding: 10px  20px;
+    font-weight: bold;
+    background-color: rgba(46, 204, 113, 0.8);
+    color: white;
+    font-size: 19px; }
+  #adv-img .img-right ul li, #adv-img .img-right ul .img-left .img-listButton .active, #adv-img .img-left .img-listButton .img-right ul .active {
+    padding: 10px 30px;
+    line-height: 20px;
+    cursor: pointer; }
+    #adv-img .img-right ul li:hover, #adv-img .img-right ul .img-left .img-listButton .active:hover, #adv-img .img-left .img-listButton .img-right ul .active:hover {
+      transition-duration: 0.5s;
+      background-color: rgba(240, 240, 240, 0.5);
+      border-left: 7px solid #2ecc71; }
