@@ -1,0 +1,34 @@
+.content{
+  .advisory-manage-content{
+    min-width: 1000px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: white;
+    .button-group{
+      display:inline;
+      .input-group{
+        width: 200px;
+        display: inline-table;
+      }
+    }
+
+    table{
+      table-layout:fixed;
+      //width: 100;
+      tr{
+        .text{
+          overflow: hidden;
+          white-space: nowrap;    //文本不换行
+          text-overflow: ellipsis;
+          //word-break:keep-all;
+        }
+        .title{
+          @extend .text;
+          width: 80%;
+        }
+
+      }
+    }
+  }
+
+}

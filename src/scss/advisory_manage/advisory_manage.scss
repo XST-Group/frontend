@@ -1,7 +1,5 @@
+@charset "utf-8";
 .admin{
-  @import"content-course.scss";
-  .content{
-	@import "button-group.scss";
-	@import "table.scss";
-  }
+  @import "content-course";
+  @import "content";
 }
