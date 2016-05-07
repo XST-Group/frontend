@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>校视通</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--<link href='http://fonts.useso.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" href="css/app.min.css"/>
+    <link rel="stylesheet" href="css/admin_manage.css"/>
+
+</head>
+<body>
+
+
+<!--------------------
+        header
+--------------------->
+<div class="main">
+    <div class="admin">
+        <div class="navbar" role="navigation">
+            <div class="navbar-header">
+                <a class="" href="index.html">
+            <span class="navbar-brand">
+                <span class="fa fa-book"></span> 校视通
+            </span>
+                </a>
+            </div>
+
+            <div class="navbar-user" style="height: 1px;">
+                <ul id="main-menu" class="nav navbar-nav navbar-right">
+                    <li class="dropdown hidden-xs">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="fa fa-user padding-right-small" style="position:relative;top: 3px;"></span> xuzhao***.com
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="./">个人中心</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./">账号设置</a></li>
+                            <li><a href="./">意见反馈</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" href="sign-in.html">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!--------------------
+               nav
+        --------------------->
+        <div class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" data-target="userManage" class="nav-header">
+                        <i class="fa fa-user"></i> 用户管理<i class="fa fa-collapse"></i>
+                    </a>
+                </li>
+                <li>
+                    <ul class="userManage nav nav-list" style="display: none;border-bottom: 1px solid #ccc;">
+                      <li><a href="userList.html"><span class="fa fa-caret-right"></span> 用户列表</a></li>
+                      <li><a href="registerCheck.html"><span class="fa fa-caret-right"></span> 注册审核</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" data-target="resourceManage" class="nav-header">
+                        <i class="fa fa-folder"></i> 资源管理<i class="fa fa-collapse"></i>
+                    </a>
+                </li>
+                <li>
+                    <ul class="resourceManage nav nav-list" style="display: none;border-bottom: 1px solid #ccc;">
+                        <li><a href="web-latest.html"><span class="fa fa-caret-right"></span> 资源1</a></li>
+                        <li><a href="web-parameter.html"><span class="fa fa-caret-right"></span> 资源2</a></li>
+                        <li><a href="web-bug.html"><span class="fa fa-caret-right"></span> 资源3</a></li>
+                        <li><a href="web-courselist.html"><span class="fa fa-caret-right"></span> 课程列表</a></li>
+                        <li><a href="web-courseadd.html"><span class="fa fa-caret-right"></span> 课程添加</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" data-target="dashboard-menu3" class="nav-header">
+                        <i class="fa fa-fw fa-group"></i>&nbsp;&nbsp;小组管理<i class="fa fa-collapse"></i>
+                    </a>
+                </li>
+                <li>
+                    <ul class="dashboard-menu3 nav nav-list" style="display: none;border-bottom: 1px solid #ccc;">
+                        <li><a href="users-change.html"><span class="fa fa-caret-right"></span>小组1</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" data-target="dashboard-menu4" class="nav-header"><i
+                        class="fa fa-fw fa-volume-up"></i>&nbsp;&nbsp;资讯管理</a></li>
+                <li>
+
+
+            </ul>
+        </div>
+
+
+        <div class="content-course">
+
+          <form class="form-horizontal news-add" style="padding:50px" action="${rootPath}/admin/news/add" method="post">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">添加资讯标题</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control"  name="title"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">图片URL</label>
+              <div class="col-sm-6">
+                <input type="url" class="form-control" name="thumb" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">资讯概要</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="description">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">资讯内容</label>
+              <div class="col-sm-8">
+                <textarea  name="content" id="editor" class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">资讯分组</label>
+              <div class="col-sm-3">
+                <select class="form-control" name="arr_group_id">
+                  <option value="01">语文课题小组</option>
+                  <option value="02">英语课题小组</option>
+                  <option value="03">数学专题小组</option>
+                  <option value="04">化学专题小组</option>
+                  <option value="05">物理专题小组</option>
+                  <option value="06">地理专题小组</option>
+                  <option value="07">生物专题小组</option>
+                  <option value="08">历史专题小组</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">资讯类别</label>
+              <div class="col-sm-3">
+                <select class="form-control" name="type">
+                  <option value="01">教研</option>
+                  <option value="02">管理</option>
+                  <option value="03">综合</option>
+                  <option value="04">海外</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">提交</button>
+              </div>
+            </div>
+          </form>
+    </div>
+
+    <script type="text/javascript"src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript"src="//cdn.bootcss.com/jquery.form/3.51/jquery.form.min.js"></script>
+    <script type="text/javascript"src="js/main.min.js"></script>
+    <script type="text/javascript">CKEDITOR.replace('content');</script>
+  </body>
+</html>
