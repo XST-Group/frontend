@@ -14,7 +14,7 @@
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -9903,3 +9903,19 @@ footer {
 .news-add {
   background-color: #fff;
   padding: 50px; }
+
+#libraryadd form div {
+  display: block; }
+
+#libraryadd form > input {
+  display: block; }
+
+#libraryadd form input[type="submit"] {
+  margin-left: 30px; }
+
+#libraryadd form .select div {
+  width: 100%; }
+  #libraryadd form .select div select.form-control {
+    width: 140px;
+    margin-right: 40px;
+    display: inline-block; }
