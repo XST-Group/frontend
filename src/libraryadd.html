@@ -178,49 +178,17 @@
 <script type="text/javascript">
     window.onload = function(){
         var selects = document.getElementById("select-category").getElementsByTagName('select');
-        for(var i=1;i<selects.length;i++){
+        for(var i=1; i<selects.length; i++){
             selects[i].style.display = 'none';
         }
         document.getElementById("category").addEventListener("change",function(){
-            console.log(this.value);
-            if(this.value=="1"){
-                for(var i=1;i<selects.length;i++){
-                    selects[i].style.display = 'none';
-                    selects[i].removeAttribute('name');
-                }
-                selects[1].style.display = 'inline-block';
-                selects[1].setAttribute("name","cate2");
-                alert(this.value);
-                document.getElementById("second-category-select").options.length=0;
+            var index = Number(this.value);
+            for(var i=1; i<selects.length; i++){
+                selects[i].style.display = 'none';
+                selects[i].removeAttribute('name');
             }
-            else if(this.value=="2"){
-                for(var i=1;i<selects.length;i++){
-                    selects[i].style.display = 'none';
-                    selects[i].removeAttribute('name');
-                }
-                selects[2].style.display = 'inline-block';
-                selects[2].setAttribute("name","cate2");
-                alert(this.value);
-                document.getElementById("second-category-select").options.length=0;
-            }
-            else if(this.value=="3"){
-                for(var i=1;i<selects.length;i++){
-                    selects[i].style.display = 'none';
-                    selects[i].removeAttribute('name');
-                }
-                selects[3].style.display = 'inline-block';
-                selects[3].setAttribute("name","cate2");
-                //alert(this.value);
-            }
-            else if(this.value=="4"){
-                for(var i=1;i<selects.length;i++){
-                    selects[i].style.display = 'none';
-                    selects[i].removeAttribute('name');
-                }
-                selects[4].style.display = 'inline-block';
-                selects[4].setAttribute("name","cate2");
-                //alert(this.value);
-            }
+            selects[index].style.display = 'inline-block';
+            selects[index].setAttribute("name","cate2");
         },false);
     }
 
