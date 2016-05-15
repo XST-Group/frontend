@@ -192,7 +192,7 @@
               var prog = JSON.parse(res);
               $('#prop').css('width', prog.progress+'%');
               if( prog.progress!=='100' ){
-                  regetprogress = setTimeout(go,1000);
+                  regetprogress = setTimeout(go,10);  // 每10ms刷新一次
               }
               else {
                   setTimeout(function(){
