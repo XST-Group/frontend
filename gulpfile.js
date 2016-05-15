@@ -22,8 +22,8 @@ gulp.task('css', function () {
   	gulp.src('./src/scss/*.scss')
     	.pipe(sass.sync().on('error', sass.logError))
     	.pipe(gulp.dest('./css'))
-        .pipe(rename({ suffix: '.min' }))
         .pipe(cleancss())
+        .pipe(rename({ suffix: '.min' }))
         .pipe(livereload(server))
         .pipe(gulp.dest('./css'))
         .pipe(gulp.dest('./dist/css'));

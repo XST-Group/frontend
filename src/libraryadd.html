@@ -125,16 +125,16 @@
                             <option value="3">初中</option>
                             <option value="4">高中</option>
                         </select>
-                        <select class="form-control" id="first-category-select" name="cate2" >
+                        <select class="form-control">
                             <option value="学前语文">学前语文</option>
                             <option value="学前数学">学前数学</option>
                         </select>
-                        <select class="form-control" id="second-category-select" name="cate2" >
+                        <select class="form-control">
                             <option value="小学语文">小学语文</option>
                             <option value="小学数学">小学数学</option>
                             <option value="小学英语">小学英语</option>
                         </select>
-                        <select class="form-control" id="third-category-select" name="cate2" >
+                        <select class="form-control">
                             <option value="初中语文">初中语文</option>
                             <option value="初中数学">初中数学</option>
                             <option value="初中英语">初中英语</option>
@@ -145,7 +145,7 @@
                             <option value="初中历史">初中历史</option>
                             <option value="初中地理">初中地理</option>
                         </select>
-                        <select class="form-control" id="fourth-category-select" name="cate2">
+                        <select class="form-control">
                             <option value="19">高中语文</option>
                             <option value="20">高中数学</option>
                             <option value="21">高中英语</option>
@@ -186,31 +186,39 @@
             if(this.value=="1"){
                 for(var i=1;i<selects.length;i++){
                     selects[i].style.display = 'none';
+                    selects[i].removeAttribute('name');
                 }
                 selects[1].style.display = 'inline-block';
+                selects[1].setAttribute("name","cate2");
                 alert(this.value);
                 document.getElementById("second-category-select").options.length=0;
             }
             else if(this.value=="2"){
                 for(var i=1;i<selects.length;i++){
                     selects[i].style.display = 'none';
+                    selects[i].removeAttribute('name');
                 }
                 selects[2].style.display = 'inline-block';
+                selects[2].setAttribute("name","cate2");
                 alert(this.value);
                 document.getElementById("second-category-select").options.length=0;
             }
             else if(this.value=="3"){
                 for(var i=1;i<selects.length;i++){
                     selects[i].style.display = 'none';
+                    selects[i].removeAttribute('name');
                 }
                 selects[3].style.display = 'inline-block';
+                selects[3].setAttribute("name","cate2");
                 //alert(this.value);
             }
             else if(this.value=="4"){
                 for(var i=1;i<selects.length;i++){
                     selects[i].style.display = 'none';
+                    selects[i].removeAttribute('name');
                 }
                 selects[4].style.display = 'inline-block';
+                selects[4].setAttribute("name","cate2");
                 //alert(this.value);
             }
         },false);
