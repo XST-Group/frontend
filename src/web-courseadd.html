@@ -161,8 +161,7 @@
      <div class="suspend-content">
        <p id="cname"></p>
        <div class="progress">
-         <div id="prop" class="progress-bar progress-bar-primary" style="width: 0%;">
-         </div>
+           <div id="prop"  style="width: 10%;height: 20px;background-color:red;">-</div>
        </div>
        <button type="reset" class="btn btn-danger" onclick="cancel()">取消上传</button>
      </div>
@@ -184,11 +183,11 @@
     var regetprogress;
     function go(){
       $.ajax({
-          url:'/',   //  your Servlet
-          type:'post',
+          //url:'/',   //  your Servlet
+          type:'get',
           data: $('form').serialize(),
           success: function(res){    //   JSON格式 ：  res = '{"progress": "40"}';
-              // var res = '{"progress":"100"}';  测试数据
+              var res = '{"progress":"40"}';  //测试数据
               var prog = JSON.parse(res);
               $('#prop').css('width', prog.progress+'%');
               if( prog.progress!=='100' ){
