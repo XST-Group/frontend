@@ -105,53 +105,68 @@
         </div>
 
 
-        <div class="content-course">
+        <div class="content-course" id="libraryadd">
 
             <!--  课程添加   -->
-            <h2 class="dash-head">课程添加</h2>
-            <form class="video-add" name="form1" id="form1" action="UploadServlet" method="post" enctype="multipart/form-data" target="if" onsubmit="return go()">
+            <h2 class="dash-head">文库添加</h2>
+            <form class="video-add" name="form1" id="form1" action="${rootPath}/admin/library/add"
+                  method="post" enctype="multipart/form-data" target="if" onsubmit="return go()" >
                 <div class="form-group form-info">
-                    <label for="courseName">课程名称</label>
-                    <input type="text" class="form-control" id="courseName" value="">
+                    <label for="courseName">文档类型</label>
+                    <input type="text" class="form-control" id="courseName" name="doctype" value="">
                 </div>
                 <div class="select">
-                    <div class="">
-                        <span>一级目录</span>
-                        <select class="form-control">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
+                    <div id="select-category">
+                        <span>&nbsp;&nbsp;&nbsp;分&nbsp;&nbsp;类&nbsp;&nbsp;&nbsp;</span>
+                        <select class="form-control" id="category" name="cate1">
+                            <option selected value="">请选择</option>
+                            <option value="1">学前</option>
+                            <option value="2">小学</option>
+                            <option value="3">初中</option>
+                            <option value="4">高中</option>
                         </select>
-                    </div>
-                    <div class="">
-                        <span>二级目录</span>
                         <select class="form-control">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
+                            <option value="学前语文">学前语文</option>
+                            <option value="学前数学">学前数学</option>
                         </select>
-                    </div>
-                    <div class="">
-                        <span>三级目录</span>
                         <select class="form-control">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
+                            <option value="小学语文">小学语文</option>
+                            <option value="小学数学">小学数学</option>
+                            <option value="小学英语">小学英语</option>
                         </select>
+                        <select class="form-control">
+                            <option value="初中语文">初中语文</option>
+                            <option value="初中数学">初中数学</option>
+                            <option value="初中英语">初中英语</option>
+                            <option value="初中物理">初中物理</option>
+                            <option value="初中化学">初中化学</option>
+                            <option value="初中生物">初中生物</option>
+                            <option value="初中政治">初中政治</option>
+                            <option value="初中历史">初中历史</option>
+                            <option value="初中地理">初中地理</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="19">高中语文</option>
+                            <option value="20">高中数学</option>
+                            <option value="21">高中英语</option>
+                            <option value="22">高中物理</option>
+                            <option value="23">高中化学</option>
+                            <option value="24">高中生物</option>
+                            <option value="25">高中政治</option>
+                            <option value="26">高中历史</option>
+                            <option value="27">高中地理</option>
+                            <option value="28">信息技术</option>
+                        </select>
+
                     </div>
                 </div>
-                <div class="form-group inputFile">
-                    <label for="inputFile">上传视频</label>
-                    <input type="file" id="inputFile" value="">
-                    <p class="help-block">支持MP4格式</p>
+
+                <div class="form-group inputFile" >
+                    <label for="inputFile">上传文件</label>
+                    <input type="file" id="inputFile" name="doc" value=""/>
+                    <span class="help-block">支持各种</span>
                 </div>
-                <button type="submit" class="btn btn-success btn-course">确定</button>
+                <input type="submit" class="btn btn-success" value="上传" />
             </form>
             <!--  END 课程添加-->
             <iframe id="if" name="if" src="" style="display: none"></iframe>
@@ -160,8 +175,26 @@
 
       </div>
    </div>
+<script type="text/javascript">
+    window.onload = function(){
+        var selects = document.getElementById("select-category").getElementsByTagName('select');
+        for(var i=1; i<selects.length; i++){
+            selects[i].style.display = 'none';
+        }
+        document.getElementById("category").addEventListener("change",function(){
+            var index = Number(this.value);
+            for(var i=1; i<selects.length; i++){
+                selects[i].style.display = 'none';
+                selects[i].removeAttribute('name');
+            }
+            selects[index].style.display = 'inline-block';
+            selects[index].setAttribute("name","cate2");
+        },false);
+    }
 
-   <div id="suspend">
+</script>
+
+ <!-- <div id="suspend">
      <div class="suspend-content">
        <p id="cname"></p>
        <div class="progress">
@@ -170,90 +203,22 @@
        </div>
        <button type="reset" class="btn btn-danger" onclick="cancel()">取消上传</button>
      </div>
-   </div>
-        <script>
-            $(document).ready(function () {
-                $(".sidebar-nav a").click(function(){
-                    var tree="."+$(this).attr("data-target");
-                    $(tree).slideToggle(300);
-                    if($(this).hasClass("collapsed")){
-                        $(this).removeClass("collapsed");
-                    }else{
-                        $(this).addClass("collapsed");
-                    }
-                })
-            });
-            function go(){
-              form1.submit();
-              var courseName = document.getElementById('courseName');
-              var cname = document.getElementById('cname');
-              var suspend = document.getElementById('suspend');
-              var prop = document.getElementById("prop");
-              suspend.style.display = 'block';
-              cname.innerHTML = courseName.value;
-              var timer = setInterval("getP()",50);
-            }
-            function cancel() {
-              document.getElementById("suspend").style.display = "none";
-              document.getElementById("prop").style.width = 0;
-              document.getElementById('inputFile').value = "";
-            }
+   </div> -->
 
-            var request;
-            if (window.XMLHttpRequest) {
-              request = new XMLHttpRequest();
-            } else {
-              request = new ActiveXObject('Microsoft.XMLHTTP');
-            }
+       <script>
+           $(document).ready(function () {
+               $(".sidebar-nav a").click(function(){
+                   var tree="."+$(this).attr("data-target");
+                   $(tree).slideToggle(300);
+                   if($(this).hasClass("collapsed")){
+                       $(this).removeClass("collapsed");
+                   }else{
+                       $(this).addClass("collapsed");
+                   }
+               })
+           });
+       </script>
 
-            function getP(){
-              request.onreadystatechange = callBack;
-              var url = "getProgressServlet";
-              request.open("post",url,true);
-              request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-              request.send( "&timeStamp=" + (new Date()).getTime() );
-            }
-
-            function callBack(){
-              if( request.readyState===4 && request.status===200 ){
-                var result = request.responseText;
-                result = result.replace(/(^\s*)|(\s*$)/g, "");
-                var res = result.split(",");
-                var flag = res[1];
-                var per = parseInt(res[0]);
-                var err = res[2];
-                document.getElementById("prop").style.width = per+"%";
-                if(flag == "OK"){
-                  window.clearInterval(timer);
-                  alert("课程添加成功！");
-                  document.getElementById("suspend").style.display = "none";
-                  document.getElementById("prop").style.width = 0;
-                }
-                if( err!="" || err.length>0 ) {
-                  window.clearInterval(timer);
-                  alert(err);
-                }
-                if( flag==null ) {
-                  window.clearInterval(timer);
-                }
-              }
-            }
-
-        </script>
-
-        <link rel="stylesheet" href="//cdn.bootcss.com/iCheck/1.0.2/skins/square/blue.css"/>
-
-        <script src="//cdn.bootcss.com/iCheck/1.0.2/icheck.min.js"></script>
-        <!--icheck-->
-        <script>
-            $(document).ready(function(){
-                $('input').iCheck({
-                    checkboxClass: 'icheckbox_square-blue',
-                    radioClass: 'iradio_square-blue',
-                    increaseArea: '20%' // optional
-                });
-            });
-        </script>
 
 
 </body>
