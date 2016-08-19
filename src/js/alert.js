@@ -13,5 +13,5 @@ $(function(){
     $('.btn').on('click',function(){
       $('.suspend').css('display','none');
     });
-  }
+};
 });

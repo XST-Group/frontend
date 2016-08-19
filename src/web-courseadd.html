@@ -109,7 +109,7 @@
 
             <!--  课程添加   -->
             <h2 class="dash-head">课程添加</h2>
-            <form class="video-add" name="form1" id="form1" action="UploadServlet" method="post" enctype="multipart/form-data" target="if" onsubmit="return go()">
+            <form class="video-add" id="form" method="post" enctype="multipart/form-data" target="if" onsubmit="return go()">
                 <div class="form-group form-info">
                     <label for="courseName">课程名称</label>
                     <input type="text" class="form-control" id="courseName" value="">
@@ -153,11 +153,7 @@
                 </div>
                 <button type="submit" class="btn btn-success btn-course">确定</button>
             </form>
-            <!--  END 课程添加-->
-            <iframe id="if" name="if" src="" style="display: none"></iframe>
-
         </div>
-
       </div>
    </div>
 
@@ -165,95 +161,80 @@
      <div class="suspend-content">
        <p id="cname"></p>
        <div class="progress">
-         <div id="prop" class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-         </div>
+           <div id="prop"  style="width: 10%;height: 20px;background-color:red;">-</div>
        </div>
        <button type="reset" class="btn btn-danger" onclick="cancel()">取消上传</button>
      </div>
    </div>
-        <script>
-            $(document).ready(function () {
-                $(".sidebar-nav a").click(function(){
-                    var tree="."+$(this).attr("data-target");
-                    $(tree).slideToggle(300);
-                    if($(this).hasClass("collapsed")){
-                        $(this).removeClass("collapsed");
-                    }else{
-                        $(this).addClass("collapsed");
-                    }
-                })
-            });
-            function go(){
-              form1.submit();
-              var courseName = document.getElementById('courseName');
-              var cname = document.getElementById('cname');
-              var suspend = document.getElementById('suspend');
-              var prop = document.getElementById("prop");
-              suspend.style.display = 'block';
-              cname.innerHTML = courseName.value;
-              var timer = setInterval("getP()",50);
-            }
-            function cancel() {
-              document.getElementById("suspend").style.display = "none";
-              document.getElementById("prop").style.width = 0;
-              document.getElementById('inputFile').value = "";
-            }
 
-            var request;
-            if (window.XMLHttpRequest) {
-              request = new XMLHttpRequest();
-            } else {
-              request = new ActiveXObject('Microsoft.XMLHTTP');
+<script>
+    $(document).ready(function () {
+        $(".sidebar-nav a").click(function(){
+            var tree="."+$(this).attr("data-target");
+            $(tree).slideToggle(300);
+            if($(this).hasClass("collapsed")){
+                $(this).removeClass("collapsed");
+            }else{
+                $(this).addClass("collapsed");
             }
+        })
+    });
 
-            function getP(){
-              request.onreadystatechange = callBack;
-              var url = "getProgressServlet";
-              request.open("post",url,true);
-              request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-              request.send( "&timeStamp=" + (new Date()).getTime() );
-            }
-
-            function callBack(){
-              if( request.readyState===4 && request.status===200 ){
-                var result = request.responseText;
-                result = result.replace(/(^\s*)|(\s*$)/g, "");
-                var res = result.split(",");
-                var flag = res[1];
-                var per = parseInt(res[0]);
-                var err = res[2];
-                document.getElementById("prop").style.width = per+"%";
-                if(flag == "OK"){
-                  window.clearInterval(timer);
-                  alert("课程添加成功！");
-                  document.getElementById("suspend").style.display = "none";
-                  document.getElementById("prop").style.width = 0;
-                }
-                if( err!="" || err.length>0 ) {
-                  window.clearInterval(timer);
-                  alert(err);
-                }
-                if( flag==null ) {
-                  window.clearInterval(timer);
-                }
+    var regetprogress;
+    function go(){
+      $.ajax({
+          //url:'/',   //  your Servlet
+          type:'get',
+          data: $('form').serialize(),
+          success: function(res){    //   JSON格式 ：  res = '{"progress": "40"}';
+              var res = '{"progress":"40"}';  //测试数据
+              var prog = JSON.parse(res);
+              $('#prop').css('width', prog.progress+'%');
+              if( prog.progress!=='100' ){
+                  regetprogress = setTimeout(go,10);  // 每10ms刷新一次
               }
-            }
+              else {
+                  setTimeout(function(){
+                      alert('上传成功');
+                      clearTimeout(regetprogress);
+                      cancel();
+                      document.getElementById('form').reset();
+                  },800);
+              }
+          }
+      })
+      var courseName = document.getElementById('courseName');
+      var cname = document.getElementById('cname');
+      var suspend = document.getElementById('suspend');
+      var prop = document.getElementById("prop");
+      suspend.style.display = 'block';
+      cname.innerHTML = courseName.value;
+      return false;
+    }
+    function cancel() {
+      document.getElementById("suspend").style.display = "none";
+      document.getElementById("prop").style.width = 0;
+      document.getElementById('inputFile').value = "";
+      clearTimeout(regetprogress);
+    }
 
-        </script>
 
-        <link rel="stylesheet" href="//cdn.bootcss.com/iCheck/1.0.2/skins/square/blue.css"/>
 
-        <script src="//cdn.bootcss.com/iCheck/1.0.2/icheck.min.js"></script>
-        <!--icheck-->
-        <script>
-            $(document).ready(function(){
-                $('input').iCheck({
-                    checkboxClass: 'icheckbox_square-blue',
-                    radioClass: 'iradio_square-blue',
-                    increaseArea: '20%' // optional
-                });
-            });
-        </script>
+</script>
+
+<link rel="stylesheet" href="//cdn.bootcss.com/iCheck/1.0.2/skins/square/blue.css"/>
+
+<script src="//cdn.bootcss.com/iCheck/1.0.2/icheck.min.js"></script>
+<!--icheck-->
+<script>
+    $(document).ready(function(){
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
 
 
 </body>
